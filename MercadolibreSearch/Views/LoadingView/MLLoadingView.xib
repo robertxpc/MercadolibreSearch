@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="CFD-NA-MTh" customClass="MLLoadingView" customModule="MercadolibreSearch" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" alpha="0.94999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HuN-0h-f1q">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qM5-Bf-0cM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="regular"/>
+                </visualEffectView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="8Xp-bC-mcn">
+                    <rect key="frame" x="177" y="418" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="8Xp-bC-mcn" secondAttribute="height" multiplier="1:1" id="h0b-NJ-ahu"/>
+                        <constraint firstAttribute="width" constant="60" id="ou2-ad-UJA"/>
+                    </constraints>
+                    <color key="color" systemColor="systemYellowColor"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="hVe-7N-rjO"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="HuN-0h-f1q" firstAttribute="top" secondItem="CFD-NA-MTh" secondAttribute="top" id="2NW-lE-RR1"/>
+                <constraint firstItem="HuN-0h-f1q" firstAttribute="leading" secondItem="CFD-NA-MTh" secondAttribute="leading" id="AHl-Rl-Iwv"/>
+                <constraint firstItem="HuN-0h-f1q" firstAttribute="trailing" secondItem="hVe-7N-rjO" secondAttribute="trailing" id="gBP-P6-B5Y"/>
+                <constraint firstItem="8Xp-bC-mcn" firstAttribute="centerY" secondItem="CFD-NA-MTh" secondAttribute="centerY" id="mhM-qD-Qbs"/>
+                <constraint firstItem="8Xp-bC-mcn" firstAttribute="centerX" secondItem="CFD-NA-MTh" secondAttribute="centerX" id="op3-jr-YTR"/>
+                <constraint firstAttribute="bottom" secondItem="HuN-0h-f1q" secondAttribute="bottom" id="uG4-2e-u0K"/>
+            </constraints>
+            <connections>
+                <outlet property="activityIndicatorView" destination="8Xp-bC-mcn" id="qG5-oX-cId"/>
+            </connections>
+            <point key="canvasLocation" x="69.565217391304358" y="54.910714285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

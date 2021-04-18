@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  MercadolibreSearch
+
+  Created by Roberto Parra Castillo on 17-04-21.
+  
+*/
+"no_internet_message" = "Verifique su conexión a Internet.";
+"not_found_error" = "Error no encontrado";
+"no_product_available" = "No hay Productos disponibles en este momento para su busqueda.";

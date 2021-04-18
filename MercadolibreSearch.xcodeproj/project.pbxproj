@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,21 @@
 		022613EA2637F81400043268 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 022613E82637F81400043268 /* LaunchScreen.storyboard */; };
 		022613F52637F81400043268 /* MercadolibreSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022613F42637F81400043268 /* MercadolibreSearchTests.swift */; };
 		022614002637F81400043268 /* MercadolibreSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022613FF2637F81400043268 /* MercadolibreSearchUITests.swift */; };
+		022614172637F81400043268 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022614162637F81400043268 /* BaseViewController.swift */; };
+		0226141F2637F81400043268 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0226141E2637F81400043268 /* BaseViewModel.swift */; };
+		022614242637F81400043268 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022614232637F81400043268 /* BaseRouter.swift */; };
+		022614412637F81400043268 /* MLErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022614402637F81400043268 /* MLErrorView.swift */; };
+		022614462637F81400043268 /* MLErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 022614452637F81400043268 /* MLErrorView.xib */; };
+		0226144B2637F81400043268 /* MLLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0226144A2637F81400043268 /* MLLoadingView.xib */; };
+		022614502637F81400043268 /* MLLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0226144F2637F81400043268 /* MLLoadingView.swift */; };
+		022614552637F81400043268 /* MLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022614542637F81400043268 /* MLError.swift */; };
+		022614602637F81400043268 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0226145F2637F81400043268 /* UIView+Extensions.swift */; };
+		022614682637F81400043268 /* MLError+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022614672637F81400043268 /* MLError+Extensions.swift */; };
+		0226146D2637F81400043268 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0226146C2637F81400043268 /* String+Extensions.swift */; };
+		022614732637F81400043268 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 022614722637F81400043268 /* Localizable.strings */; };
+		A80B61A0195C390D9A373E20 /* Pods_MercadolibreSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 445734031404E0FE223F229D /* Pods_MercadolibreSearch.framework */; };
+		C06E3E0687987123CF2D3919 /* Pods_MercadolibreSearch_MercadolibreSearchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAD200124A418CD7AC4C19F /* Pods_MercadolibreSearch_MercadolibreSearchUITests.framework */; };
+		CEB053A25333F40BAFD83708 /* Pods_MercadolibreSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCA1198D6B8AB676CAAA213 /* Pods_MercadolibreSearchTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +66,27 @@
 		022613FB2637F81400043268 /* MercadolibreSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MercadolibreSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		022613FF2637F81400043268 /* MercadolibreSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercadolibreSearchUITests.swift; sourceTree = "<group>"; };
 		022614012637F81400043268 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		022614162637F81400043268 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		0226141E2637F81400043268 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		022614232637F81400043268 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		022614402637F81400043268 /* MLErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLErrorView.swift; sourceTree = "<group>"; };
+		022614452637F81400043268 /* MLErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MLErrorView.xib; sourceTree = "<group>"; };
+		0226144A2637F81400043268 /* MLLoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MLLoadingView.xib; sourceTree = "<group>"; };
+		0226144F2637F81400043268 /* MLLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLLoadingView.swift; sourceTree = "<group>"; };
+		022614542637F81400043268 /* MLError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLError.swift; sourceTree = "<group>"; };
+		0226145F2637F81400043268 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		022614672637F81400043268 /* MLError+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MLError+Extensions.swift"; sourceTree = "<group>"; };
+		0226146C2637F81400043268 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		022614722637F81400043268 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		193D502F5EED16C63D92BE0E /* Pods-MercadolibreSearch-MercadolibreSearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadolibreSearch-MercadolibreSearchUITests.release.xcconfig"; path = "Target Support Files/Pods-MercadolibreSearch-MercadolibreSearchUITests/Pods-MercadolibreSearch-MercadolibreSearchUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2FCA1198D6B8AB676CAAA213 /* Pods_MercadolibreSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadolibreSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		445734031404E0FE223F229D /* Pods_MercadolibreSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadolibreSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AAD200124A418CD7AC4C19F /* Pods_MercadolibreSearch_MercadolibreSearchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadolibreSearch_MercadolibreSearchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C61E7AB2DE7CCD5545378AB /* Pods-MercadolibreSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadolibreSearchTests.release.xcconfig"; path = "Target Support Files/Pods-MercadolibreSearchTests/Pods-MercadolibreSearchTests.release.xcconfig"; sourceTree = "<group>"; };
+		9212598004C4A5BCC94F3115 /* Pods-MercadolibreSearch-MercadolibreSearchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadolibreSearch-MercadolibreSearchUITests.debug.xcconfig"; path = "Target Support Files/Pods-MercadolibreSearch-MercadolibreSearchUITests/Pods-MercadolibreSearch-MercadolibreSearchUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A848A051F7BEEA2AD1D969F9 /* Pods-MercadolibreSearchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadolibreSearchTests.debug.xcconfig"; path = "Target Support Files/Pods-MercadolibreSearchTests/Pods-MercadolibreSearchTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B0F26E6445C87E8D82F9994F /* Pods-MercadolibreSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadolibreSearch.debug.xcconfig"; path = "Target Support Files/Pods-MercadolibreSearch/Pods-MercadolibreSearch.debug.xcconfig"; sourceTree = "<group>"; };
+		CFE520EB58A1ED27E71C033E /* Pods-MercadolibreSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadolibreSearch.release.xcconfig"; path = "Target Support Files/Pods-MercadolibreSearch/Pods-MercadolibreSearch.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A80B61A0195C390D9A373E20 /* Pods_MercadolibreSearch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB053A25333F40BAFD83708 /* Pods_MercadolibreSearchTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C06E3E0687987123CF2D3919 /* Pods_MercadolibreSearch_MercadolibreSearchUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +124,8 @@
 				022613F32637F81400043268 /* MercadolibreSearchTests */,
 				022613FE2637F81400043268 /* MercadolibreSearchUITests */,
 				022613D82637F81400043268 /* Products */,
+				9AAB6624069DD68DFA989E2F /* Pods */,
+				D201257686B242A9F8A555F0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +142,12 @@
 		022613D92637F81400043268 /* MercadolibreSearch */ = {
 			isa = PBXGroup;
 			children = (
+				022614102637F81400043268 /* Utilities */,
+				022614122637F81400043268 /* Extensions */,
+				022614152637F81400043268 /* Base */,
+				022614142637F81400043268 /* Network */,
+				022614132637F81400043268 /* Views */,
+				022614112637F81400043268 /* Model */,
 				022613DA2637F81400043268 /* AppDelegate.swift */,
 				022613DC2637F81400043268 /* SceneDelegate.swift */,
 				022613DE2637F81400043268 /* ViewController.swift */,
@@ -109,6 +156,7 @@
 				022613E82637F81400043268 /* LaunchScreen.storyboard */,
 				022613EB2637F81400043268 /* Info.plist */,
 				022613E32637F81400043268 /* MercadolibreSearch.xcdatamodeld */,
+				022614722637F81400043268 /* Localizable.strings */,
 			);
 			path = MercadolibreSearch;
 			sourceTree = "<group>";
@@ -131,6 +179,98 @@
 			path = MercadolibreSearchUITests;
 			sourceTree = "<group>";
 		};
+		022614102637F81400043268 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		022614112637F81400043268 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				022614542637F81400043268 /* MLError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		022614122637F81400043268 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0226145F2637F81400043268 /* UIView+Extensions.swift */,
+				022614672637F81400043268 /* MLError+Extensions.swift */,
+				0226146C2637F81400043268 /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		022614132637F81400043268 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0226143F2637F81400043268 /* LoadingView */,
+				0226143E2637F81400043268 /* ErrorView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		022614142637F81400043268 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		022614152637F81400043268 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				022614162637F81400043268 /* BaseViewController.swift */,
+				0226141E2637F81400043268 /* BaseViewModel.swift */,
+				022614232637F81400043268 /* BaseRouter.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		0226143E2637F81400043268 /* ErrorView */ = {
+			isa = PBXGroup;
+			children = (
+				022614452637F81400043268 /* MLErrorView.xib */,
+				022614402637F81400043268 /* MLErrorView.swift */,
+			);
+			path = ErrorView;
+			sourceTree = "<group>";
+		};
+		0226143F2637F81400043268 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				0226144A2637F81400043268 /* MLLoadingView.xib */,
+				0226144F2637F81400043268 /* MLLoadingView.swift */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		9AAB6624069DD68DFA989E2F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0F26E6445C87E8D82F9994F /* Pods-MercadolibreSearch.debug.xcconfig */,
+				CFE520EB58A1ED27E71C033E /* Pods-MercadolibreSearch.release.xcconfig */,
+				9212598004C4A5BCC94F3115 /* Pods-MercadolibreSearch-MercadolibreSearchUITests.debug.xcconfig */,
+				193D502F5EED16C63D92BE0E /* Pods-MercadolibreSearch-MercadolibreSearchUITests.release.xcconfig */,
+				A848A051F7BEEA2AD1D969F9 /* Pods-MercadolibreSearchTests.debug.xcconfig */,
+				7C61E7AB2DE7CCD5545378AB /* Pods-MercadolibreSearchTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D201257686B242A9F8A555F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				445734031404E0FE223F229D /* Pods_MercadolibreSearch.framework */,
+				5AAD200124A418CD7AC4C19F /* Pods_MercadolibreSearch_MercadolibreSearchUITests.framework */,
+				2FCA1198D6B8AB676CAAA213 /* Pods_MercadolibreSearchTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +278,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 022614042637F81400043268 /* Build configuration list for PBXNativeTarget "MercadolibreSearch" */;
 			buildPhases = (
+				EEFADEFB6BD8B339794EEEA7 /* [CP] Check Pods Manifest.lock */,
 				022613D32637F81400043268 /* Sources */,
 				022613D42637F81400043268 /* Frameworks */,
 				022613D52637F81400043268 /* Resources */,
+				9A6DE69D5E728E2E4A80ABAC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,9 +297,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 022614072637F81400043268 /* Build configuration list for PBXNativeTarget "MercadolibreSearchTests" */;
 			buildPhases = (
+				13EAAD60A4873AD5EA35D8FF /* [CP] Check Pods Manifest.lock */,
 				022613EC2637F81400043268 /* Sources */,
 				022613ED2637F81400043268 /* Frameworks */,
 				022613EE2637F81400043268 /* Resources */,
+				DEA0C52B4150DFA8DDE51BCA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -173,9 +317,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0226140A2637F81400043268 /* Build configuration list for PBXNativeTarget "MercadolibreSearchUITests" */;
 			buildPhases = (
+				7A800013BCBF31EA60C4B78A /* [CP] Check Pods Manifest.lock */,
 				022613F72637F81400043268 /* Sources */,
 				022613F82637F81400043268 /* Frameworks */,
 				022613F92637F81400043268 /* Resources */,
+				D41E838E30D2CCC0AF5CEA6C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,7 +381,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				022613EA2637F81400043268 /* LaunchScreen.storyboard in Resources */,
+				022614732637F81400043268 /* Localizable.strings in Resources */,
 				022613E72637F81400043268 /* Assets.xcassets in Resources */,
+				0226144B2637F81400043268 /* MLLoadingView.xib in Resources */,
+				022614462637F81400043268 /* MLErrorView.xib in Resources */,
 				022613E22637F81400043268 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,15 +405,144 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		13EAAD60A4873AD5EA35D8FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MercadolibreSearchTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A800013BCBF31EA60C4B78A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MercadolibreSearch-MercadolibreSearchUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A6DE69D5E728E2E4A80ABAC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MercadolibreSearch/Pods-MercadolibreSearch-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MercadolibreSearch/Pods-MercadolibreSearch-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MercadolibreSearch/Pods-MercadolibreSearch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D41E838E30D2CCC0AF5CEA6C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MercadolibreSearch-MercadolibreSearchUITests/Pods-MercadolibreSearch-MercadolibreSearchUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MercadolibreSearch-MercadolibreSearchUITests/Pods-MercadolibreSearch-MercadolibreSearchUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MercadolibreSearch-MercadolibreSearchUITests/Pods-MercadolibreSearch-MercadolibreSearchUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEA0C52B4150DFA8DDE51BCA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MercadolibreSearchTests/Pods-MercadolibreSearchTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MercadolibreSearchTests/Pods-MercadolibreSearchTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MercadolibreSearchTests/Pods-MercadolibreSearchTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEFADEFB6BD8B339794EEEA7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MercadolibreSearch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		022613D32637F81400043268 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				022614172637F81400043268 /* BaseViewController.swift in Sources */,
+				0226146D2637F81400043268 /* String+Extensions.swift in Sources */,
+				022614682637F81400043268 /* MLError+Extensions.swift in Sources */,
+				022614552637F81400043268 /* MLError.swift in Sources */,
 				022613DF2637F81400043268 /* ViewController.swift in Sources */,
+				022614412637F81400043268 /* MLErrorView.swift in Sources */,
+				022614242637F81400043268 /* BaseRouter.swift in Sources */,
 				022613DB2637F81400043268 /* AppDelegate.swift in Sources */,
+				022614502637F81400043268 /* MLLoadingView.swift in Sources */,
 				022613E52637F81400043268 /* MercadolibreSearch.xcdatamodeld in Sources */,
 				022613DD2637F81400043268 /* SceneDelegate.swift in Sources */,
+				0226141F2637F81400043268 /* BaseViewModel.swift in Sources */,
+				022614602637F81400043268 /* UIView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +715,7 @@
 		};
 		022614052637F81400043268 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0F26E6445C87E8D82F9994F /* Pods-MercadolibreSearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -455,6 +734,7 @@
 		};
 		022614062637F81400043268 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFE520EB58A1ED27E71C033E /* Pods-MercadolibreSearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -473,6 +753,7 @@
 		};
 		022614082637F81400043268 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A848A051F7BEEA2AD1D969F9 /* Pods-MercadolibreSearchTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -494,6 +775,7 @@
 		};
 		022614092637F81400043268 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C61E7AB2DE7CCD5545378AB /* Pods-MercadolibreSearchTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +797,7 @@
 		};
 		0226140B2637F81400043268 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9212598004C4A5BCC94F3115 /* Pods-MercadolibreSearch-MercadolibreSearchUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -534,6 +817,7 @@
 		};
 		0226140C2637F81400043268 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 193D502F5EED16C63D92BE0E /* Pods-MercadolibreSearch-MercadolibreSearchUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
