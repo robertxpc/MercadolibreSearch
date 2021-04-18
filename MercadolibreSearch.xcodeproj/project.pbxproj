@@ -28,6 +28,12 @@
 		022614682637F81400043268 /* MLError+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022614672637F81400043268 /* MLError+Extensions.swift */; };
 		0226146D2637F81400043268 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0226146C2637F81400043268 /* String+Extensions.swift */; };
 		022614732637F81400043268 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 022614722637F81400043268 /* Localizable.strings */; };
+		0226147B2637F81400043268 /* MLServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0226147A2637F81400043268 /* MLServiceProtocol.swift */; };
+		022614802637F81400043268 /* APIRestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0226147F2637F81400043268 /* APIRestClient.swift */; };
+		022614852637F81400043268 /* APIRestClient+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022614842637F81400043268 /* APIRestClient+Protocol.swift */; };
+		0226148A2637F81400043268 /* MLResponseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022614892637F81400043268 /* MLResponseList.swift */; };
+		022614922637F81400043268 /* MLItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022614912637F81400043268 /* MLItem.swift */; };
+		022614972637F81400043268 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022614962637F81400043268 /* Logger.swift */; };
 		A80B61A0195C390D9A373E20 /* Pods_MercadolibreSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 445734031404E0FE223F229D /* Pods_MercadolibreSearch.framework */; };
 		C06E3E0687987123CF2D3919 /* Pods_MercadolibreSearch_MercadolibreSearchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAD200124A418CD7AC4C19F /* Pods_MercadolibreSearch_MercadolibreSearchUITests.framework */; };
 		CEB053A25333F40BAFD83708 /* Pods_MercadolibreSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCA1198D6B8AB676CAAA213 /* Pods_MercadolibreSearchTests.framework */; };
@@ -78,6 +84,12 @@
 		022614672637F81400043268 /* MLError+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MLError+Extensions.swift"; sourceTree = "<group>"; };
 		0226146C2637F81400043268 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		022614722637F81400043268 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		0226147A2637F81400043268 /* MLServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLServiceProtocol.swift; sourceTree = "<group>"; };
+		0226147F2637F81400043268 /* APIRestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRestClient.swift; sourceTree = "<group>"; };
+		022614842637F81400043268 /* APIRestClient+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIRestClient+Protocol.swift"; sourceTree = "<group>"; };
+		022614892637F81400043268 /* MLResponseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLResponseList.swift; sourceTree = "<group>"; };
+		022614912637F81400043268 /* MLItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLItem.swift; sourceTree = "<group>"; };
+		022614962637F81400043268 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		193D502F5EED16C63D92BE0E /* Pods-MercadolibreSearch-MercadolibreSearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadolibreSearch-MercadolibreSearchUITests.release.xcconfig"; path = "Target Support Files/Pods-MercadolibreSearch-MercadolibreSearchUITests/Pods-MercadolibreSearch-MercadolibreSearchUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2FCA1198D6B8AB676CAAA213 /* Pods_MercadolibreSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadolibreSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		445734031404E0FE223F229D /* Pods_MercadolibreSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadolibreSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,11 +155,11 @@
 			isa = PBXGroup;
 			children = (
 				022614102637F81400043268 /* Utilities */,
+				022614112637F81400043268 /* Model */,
 				022614122637F81400043268 /* Extensions */,
 				022614152637F81400043268 /* Base */,
 				022614142637F81400043268 /* Network */,
 				022614132637F81400043268 /* Views */,
-				022614112637F81400043268 /* Model */,
 				022613DA2637F81400043268 /* AppDelegate.swift */,
 				022613DC2637F81400043268 /* SceneDelegate.swift */,
 				022613DE2637F81400043268 /* ViewController.swift */,
@@ -182,6 +194,7 @@
 		022614102637F81400043268 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				022614962637F81400043268 /* Logger.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -190,6 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				022614542637F81400043268 /* MLError.swift */,
+				022614892637F81400043268 /* MLResponseList.swift */,
+				022614912637F81400043268 /* MLItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -216,6 +231,9 @@
 		022614142637F81400043268 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				0226147A2637F81400043268 /* MLServiceProtocol.swift */,
+				0226147F2637F81400043268 /* APIRestClient.swift */,
+				022614842637F81400043268 /* APIRestClient+Protocol.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -530,6 +548,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				022614972637F81400043268 /* Logger.swift in Sources */,
 				022614172637F81400043268 /* BaseViewController.swift in Sources */,
 				0226146D2637F81400043268 /* String+Extensions.swift in Sources */,
 				022614682637F81400043268 /* MLError+Extensions.swift in Sources */,
@@ -541,7 +560,12 @@
 				022614502637F81400043268 /* MLLoadingView.swift in Sources */,
 				022613E52637F81400043268 /* MercadolibreSearch.xcdatamodeld in Sources */,
 				022613DD2637F81400043268 /* SceneDelegate.swift in Sources */,
+				022614922637F81400043268 /* MLItem.swift in Sources */,
+				0226148A2637F81400043268 /* MLResponseList.swift in Sources */,
+				022614852637F81400043268 /* APIRestClient+Protocol.swift in Sources */,
 				0226141F2637F81400043268 /* BaseViewModel.swift in Sources */,
+				0226147B2637F81400043268 /* MLServiceProtocol.swift in Sources */,
+				022614802637F81400043268 /* APIRestClient.swift in Sources */,
 				022614602637F81400043268 /* UIView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
