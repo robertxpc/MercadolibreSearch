@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MLErrorView: UIView {
+class MLErrorView: UIView, MLBaseXibView {
 
     @IBOutlet weak var message: UILabel!
     @IBOutlet weak var imageView: UIImageView!
@@ -17,12 +17,8 @@ class MLErrorView: UIView {
     var option: MLError.Options?
 
     static func instantiate(error: Error) -> MLErrorView {
-        let view = Bundle.main.loadNibNamed("MLErrorView", owner: nil, options: nil)?.first as! MLErrorView
-
-        view.translatesAutoresizingMaskIntoConstraints = false
-
+        let view = instantiate()
         view.configure(with: (error as? MLError) ?? MLError.custom([], error))
-
         return view
     }
 

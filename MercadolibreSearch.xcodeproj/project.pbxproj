@@ -35,6 +35,7 @@
 		022614922637F81400043268 /* MLItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022614912637F81400043268 /* MLItem.swift */; };
 		022614972637F81400043268 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022614962637F81400043268 /* Logger.swift */; };
 		022614A02637F81400043268 /* MockMLServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0226149F2637F81400043268 /* MockMLServices.swift */; };
+		022614B12637F81400043268 /* MLBaseXibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022614B02637F81400043268 /* MLBaseXibView.swift */; };
 		A80B61A0195C390D9A373E20 /* Pods_MercadolibreSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 445734031404E0FE223F229D /* Pods_MercadolibreSearch.framework */; };
 		C06E3E0687987123CF2D3919 /* Pods_MercadolibreSearch_MercadolibreSearchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAD200124A418CD7AC4C19F /* Pods_MercadolibreSearch_MercadolibreSearchUITests.framework */; };
 		CEB053A25333F40BAFD83708 /* Pods_MercadolibreSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCA1198D6B8AB676CAAA213 /* Pods_MercadolibreSearchTests.framework */; };
@@ -92,6 +93,7 @@
 		022614912637F81400043268 /* MLItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLItem.swift; sourceTree = "<group>"; };
 		022614962637F81400043268 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		0226149F2637F81400043268 /* MockMLServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMLServices.swift; sourceTree = "<group>"; };
+		022614B02637F81400043268 /* MLBaseXibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLBaseXibView.swift; sourceTree = "<group>"; };
 		193D502F5EED16C63D92BE0E /* Pods-MercadolibreSearch-MercadolibreSearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadolibreSearch-MercadolibreSearchUITests.release.xcconfig"; path = "Target Support Files/Pods-MercadolibreSearch-MercadolibreSearchUITests/Pods-MercadolibreSearch-MercadolibreSearchUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2FCA1198D6B8AB676CAAA213 /* Pods_MercadolibreSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadolibreSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		445734031404E0FE223F229D /* Pods_MercadolibreSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadolibreSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -225,6 +227,7 @@
 		022614132637F81400043268 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				022614B02637F81400043268 /* MLBaseXibView.swift */,
 				0226143F2637F81400043268 /* LoadingView */,
 				0226143E2637F81400043268 /* ErrorView */,
 			);
@@ -575,6 +578,7 @@
 				022613DF2637F81400043268 /* ViewController.swift in Sources */,
 				022614412637F81400043268 /* MLErrorView.swift in Sources */,
 				022614242637F81400043268 /* BaseRouter.swift in Sources */,
+				022614B12637F81400043268 /* MLBaseXibView.swift in Sources */,
 				022613DB2637F81400043268 /* AppDelegate.swift in Sources */,
 				022614502637F81400043268 /* MLLoadingView.swift in Sources */,
 				022613E52637F81400043268 /* MercadolibreSearch.xcdatamodeld in Sources */,
