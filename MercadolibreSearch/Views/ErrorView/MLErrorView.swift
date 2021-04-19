@@ -16,7 +16,7 @@ class MLErrorView: UIView {
 
     var option: MLError.Options?
 
-    static func instaciate(error: Error) -> MLErrorView {
+    static func instantiate(error: Error) -> MLErrorView {
         let view = Bundle.main.loadNibNamed("MLErrorView", owner: nil, options: nil)?.first as! MLErrorView
 
         view.translatesAutoresizingMaskIntoConstraints = false

@@ -20,7 +20,7 @@ extension BaseViewController {
     func showLoading(_ status: Bool) {
         if status {
             if loadingView == nil {
-                let loadingView = MLLoadingView.instaciate()
+                let loadingView = MLLoadingView.instantiate()
                 view.fill(with: loadingView)
                 loadingView.startAnimating()
 
@@ -32,7 +32,7 @@ extension BaseViewController {
     }
     func show(error: Error) {
         errorView?.removeFromSuperview()
-        let errorView = MLErrorView.instaciate(error: error)
+        let errorView = MLErrorView.instantiate(error: error)
         view.fill(with: errorView)
         self.errorView = errorView
     }
