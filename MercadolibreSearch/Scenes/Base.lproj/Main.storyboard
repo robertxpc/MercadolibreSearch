@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qgs-Mr-rBT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="xBO-uR-3Q0">
+            <objects>
+                <viewController storyboardIdentifier="searchView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UIl-xe-Dd2" customClass="MLSearchViewController" customModule="MercadolibreSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="THO-X4-VAv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ie3-au-yWd">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1ZL-wc-txV">
+                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sgo-Fl-goi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1ZL-wc-txV" firstAttribute="top" secondItem="ie3-au-yWd" secondAttribute="bottom" id="8lk-Jc-Ytk"/>
+                            <constraint firstItem="1ZL-wc-txV" firstAttribute="trailing" secondItem="sgo-Fl-goi" secondAttribute="trailing" id="FHM-Vd-moj"/>
+                            <constraint firstItem="1ZL-wc-txV" firstAttribute="bottom" secondItem="sgo-Fl-goi" secondAttribute="bottom" id="PfJ-8m-dLR"/>
+                            <constraint firstItem="ie3-au-yWd" firstAttribute="trailing" secondItem="sgo-Fl-goi" secondAttribute="trailing" id="RNn-MZ-GKV"/>
+                            <constraint firstItem="ie3-au-yWd" firstAttribute="leading" secondItem="sgo-Fl-goi" secondAttribute="leading" id="g5A-eg-sZx"/>
+                            <constraint firstItem="ie3-au-yWd" firstAttribute="top" secondItem="sgo-Fl-goi" secondAttribute="top" id="me7-zu-uF7"/>
+                            <constraint firstItem="1ZL-wc-txV" firstAttribute="leading" secondItem="sgo-Fl-goi" secondAttribute="leading" id="qqg-Nm-gVD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ytn-Eb-cdX"/>
+                    <connections>
+                        <outlet property="searchBar" destination="ie3-au-yWd" id="Ic8-AT-VAH"/>
+                        <outlet property="tableView" destination="1ZL-wc-txV" id="KzN-w3-1O0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ive-V7-9lA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="339" y="-108"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sGp-Ix-R6w">
+            <objects>
+                <navigationController id="Qgs-Mr-rBT" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UOt-LY-ZES">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" systemColor="systemYellowColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="UIl-xe-Dd2" kind="relationship" relationship="rootViewController" id="blC-ic-QeT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x6k-K1-JJX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-590" y="-108"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -36,6 +36,9 @@
 		022614972637F81400043268 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022614962637F81400043268 /* Logger.swift */; };
 		022614A02637F81400043268 /* MockMLServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0226149F2637F81400043268 /* MockMLServices.swift */; };
 		022614B12637F81400043268 /* MLBaseXibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022614B02637F81400043268 /* MLBaseXibView.swift */; };
+		022614BD2637F81400043268 /* MLSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022614BA2637F81400043268 /* MLSearchRouter.swift */; };
+		022614BE2637F81400043268 /* MLSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022614BB2637F81400043268 /* MLSearchViewController.swift */; };
+		022614BF2637F81400043268 /* MLSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022614BC2637F81400043268 /* MLSearchViewModel.swift */; };
 		A80B61A0195C390D9A373E20 /* Pods_MercadolibreSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 445734031404E0FE223F229D /* Pods_MercadolibreSearch.framework */; };
 		C06E3E0687987123CF2D3919 /* Pods_MercadolibreSearch_MercadolibreSearchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAD200124A418CD7AC4C19F /* Pods_MercadolibreSearch_MercadolibreSearchUITests.framework */; };
 		CEB053A25333F40BAFD83708 /* Pods_MercadolibreSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCA1198D6B8AB676CAAA213 /* Pods_MercadolibreSearchTests.framework */; };
@@ -94,6 +97,9 @@
 		022614962637F81400043268 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		0226149F2637F81400043268 /* MockMLServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMLServices.swift; sourceTree = "<group>"; };
 		022614B02637F81400043268 /* MLBaseXibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLBaseXibView.swift; sourceTree = "<group>"; };
+		022614BA2637F81400043268 /* MLSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLSearchRouter.swift; sourceTree = "<group>"; };
+		022614BB2637F81400043268 /* MLSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLSearchViewController.swift; sourceTree = "<group>"; };
+		022614BC2637F81400043268 /* MLSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLSearchViewModel.swift; sourceTree = "<group>"; };
 		193D502F5EED16C63D92BE0E /* Pods-MercadolibreSearch-MercadolibreSearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadolibreSearch-MercadolibreSearchUITests.release.xcconfig"; path = "Target Support Files/Pods-MercadolibreSearch-MercadolibreSearchUITests/Pods-MercadolibreSearch-MercadolibreSearchUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2FCA1198D6B8AB676CAAA213 /* Pods_MercadolibreSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadolibreSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		445734031404E0FE223F229D /* Pods_MercadolibreSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadolibreSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,10 +170,10 @@
 				022614152637F81400043268 /* Base */,
 				022614142637F81400043268 /* Network */,
 				022614132637F81400043268 /* Views */,
+				022614B82637F81400043268 /* Scenes */,
 				022613DA2637F81400043268 /* AppDelegate.swift */,
 				022613DC2637F81400043268 /* SceneDelegate.swift */,
 				022613DE2637F81400043268 /* ViewController.swift */,
-				022613E02637F81400043268 /* Main.storyboard */,
 				022613E62637F81400043268 /* Assets.xcassets */,
 				022613E82637F81400043268 /* LaunchScreen.storyboard */,
 				022613EB2637F81400043268 /* Info.plist */,
@@ -286,6 +292,25 @@
 			children = (
 			);
 			path = Responses;
+			sourceTree = "<group>";
+		};
+		022614B82637F81400043268 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				022613E02637F81400043268 /* Main.storyboard */,
+				022614B92637F81400043268 /* Search */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		022614B92637F81400043268 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				022614BA2637F81400043268 /* MLSearchRouter.swift */,
+				022614BB2637F81400043268 /* MLSearchViewController.swift */,
+				022614BC2637F81400043268 /* MLSearchViewModel.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		9AAB6624069DD68DFA989E2F /* Pods */ = {
@@ -573,9 +598,12 @@
 				022614972637F81400043268 /* Logger.swift in Sources */,
 				022614172637F81400043268 /* BaseViewController.swift in Sources */,
 				0226146D2637F81400043268 /* String+Extensions.swift in Sources */,
+				022614BF2637F81400043268 /* MLSearchViewModel.swift in Sources */,
 				022614682637F81400043268 /* MLError+Extensions.swift in Sources */,
 				022614552637F81400043268 /* MLError.swift in Sources */,
+				022614BE2637F81400043268 /* MLSearchViewController.swift in Sources */,
 				022613DF2637F81400043268 /* ViewController.swift in Sources */,
+				022614BD2637F81400043268 /* MLSearchRouter.swift in Sources */,
 				022614412637F81400043268 /* MLErrorView.swift in Sources */,
 				022614242637F81400043268 /* BaseRouter.swift in Sources */,
 				022614B12637F81400043268 /* MLBaseXibView.swift in Sources */,
