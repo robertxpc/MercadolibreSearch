@@ -12,6 +12,7 @@ PODS:
   - RxSwift (5.1.2)
   - RxTest (5.1.2):
     - RxSwift (~> 5)
+  - SwiftGen (6.4.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
@@ -20,6 +21,7 @@ DEPENDENCIES:
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
   - RxTest (~> 5)
+  - SwiftGen (~> 6.4)
 
 SPEC REPOS:
   trunk:
@@ -30,6 +32,7 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - RxTest
+    - SwiftGen
 
 SPEC CHECKSUMS:
   Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
@@ -39,7 +42,8 @@ SPEC CHECKSUMS:
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 1e2e1f9570186967f617e49128ed26ccf1bafc8e
   RxTest: 274549b747dca56f47c52c8991ec5cf797ecfe40
+  SwiftGen: 67860cc7c3cfc2ed25b9b74cfd55495fc89f9108
 
-PODFILE CHECKSUM: 9715cae9c261982cfd1a39f2eb55a60897b25c3a
+PODFILE CHECKSUM: 921fdcb96fce60732cd546ad5d6956a9c015826d
 
 COCOAPODS: 1.10.1

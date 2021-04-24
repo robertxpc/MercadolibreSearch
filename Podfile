@@ -10,7 +10,8 @@ target 'MercadolibreSearch' do
   pod 'RxCocoa', '~> 5'
   pod 'Alamofire', '~> 5.2'
   pod 'AlamofireImage'
-
+  pod 'SwiftGen', '~> 6.4'
+  
   target 'MercadolibreSearchTests' do
     inherit! :search_paths
     pod 'RxBlocking', '~> 5'

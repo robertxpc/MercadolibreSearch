@@ -39,6 +39,8 @@
 		022614BD2637F81400043268 /* MLSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022614BA2637F81400043268 /* MLSearchRouter.swift */; };
 		022614BE2637F81400043268 /* MLSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022614BB2637F81400043268 /* MLSearchViewController.swift */; };
 		022614BF2637F81400043268 /* MLSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022614BC2637F81400043268 /* MLSearchViewModel.swift */; };
+		022614D62637F81400043268 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 022614D52637F81400043268 /* swiftgen.yml */; };
+		0226150F2637F81400043268 /* StoryboardScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0226150E2637F81400043268 /* StoryboardScenes.swift */; };
 		A80B61A0195C390D9A373E20 /* Pods_MercadolibreSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 445734031404E0FE223F229D /* Pods_MercadolibreSearch.framework */; };
 		C06E3E0687987123CF2D3919 /* Pods_MercadolibreSearch_MercadolibreSearchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAD200124A418CD7AC4C19F /* Pods_MercadolibreSearch_MercadolibreSearchUITests.framework */; };
 		CEB053A25333F40BAFD83708 /* Pods_MercadolibreSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCA1198D6B8AB676CAAA213 /* Pods_MercadolibreSearchTests.framework */; };
@@ -100,6 +102,8 @@
 		022614BA2637F81400043268 /* MLSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLSearchRouter.swift; sourceTree = "<group>"; };
 		022614BB2637F81400043268 /* MLSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLSearchViewController.swift; sourceTree = "<group>"; };
 		022614BC2637F81400043268 /* MLSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLSearchViewModel.swift; sourceTree = "<group>"; };
+		022614D52637F81400043268 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		0226150E2637F81400043268 /* StoryboardScenes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardScenes.swift; sourceTree = "<group>"; };
 		193D502F5EED16C63D92BE0E /* Pods-MercadolibreSearch-MercadolibreSearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadolibreSearch-MercadolibreSearchUITests.release.xcconfig"; path = "Target Support Files/Pods-MercadolibreSearch-MercadolibreSearchUITests/Pods-MercadolibreSearch-MercadolibreSearchUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2FCA1198D6B8AB676CAAA213 /* Pods_MercadolibreSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadolibreSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		445734031404E0FE223F229D /* Pods_MercadolibreSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadolibreSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +175,7 @@
 				022614142637F81400043268 /* Network */,
 				022614132637F81400043268 /* Views */,
 				022614B82637F81400043268 /* Scenes */,
+				022614D42637F81400043268 /* SwiftGen */,
 				022613DA2637F81400043268 /* AppDelegate.swift */,
 				022613DC2637F81400043268 /* SceneDelegate.swift */,
 				022613DE2637F81400043268 /* ViewController.swift */,
@@ -313,6 +318,15 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		022614D42637F81400043268 /* SwiftGen */ = {
+			isa = PBXGroup;
+			children = (
+				0226150E2637F81400043268 /* StoryboardScenes.swift */,
+				022614D52637F81400043268 /* swiftgen.yml */,
+			);
+			path = SwiftGen;
+			sourceTree = "<group>";
+		};
 		9AAB6624069DD68DFA989E2F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,6 +362,7 @@
 				022613D42637F81400043268 /* Frameworks */,
 				022613D52637F81400043268 /* Resources */,
 				9A6DE69D5E728E2E4A80ABAC /* [CP] Embed Pods Frameworks */,
+				022614DA2637F81400043268 /* SwiftGen */,
 			);
 			buildRules = (
 			);
@@ -446,6 +461,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				022613EA2637F81400043268 /* LaunchScreen.storyboard in Resources */,
+				022614D62637F81400043268 /* swiftgen.yml in Resources */,
 				022614732637F81400043268 /* Localizable.strings in Resources */,
 				022613E72637F81400043268 /* Assets.xcassets in Resources */,
 				0226144B2637F81400043268 /* MLLoadingView.xib in Resources */,
@@ -471,6 +487,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		022614DA2637F81400043268 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" config run --config  $PROJECT_DIR/MercadolibreSearch/SwiftGen/swiftgen.yml\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi\n";
+		};
 		13EAAD60A4873AD5EA35D8FF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -606,6 +640,7 @@
 				022614BD2637F81400043268 /* MLSearchRouter.swift in Sources */,
 				022614412637F81400043268 /* MLErrorView.swift in Sources */,
 				022614242637F81400043268 /* BaseRouter.swift in Sources */,
+				0226150F2637F81400043268 /* StoryboardScenes.swift in Sources */,
 				022614B12637F81400043268 /* MLBaseXibView.swift in Sources */,
 				022613DB2637F81400043268 /* AppDelegate.swift in Sources */,
 				022614502637F81400043268 /* MLLoadingView.swift in Sources */,
