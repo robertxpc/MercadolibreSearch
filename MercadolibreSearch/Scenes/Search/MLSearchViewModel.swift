@@ -26,5 +26,16 @@ class MLSearchViewModel: BaseViewModel {
         self.router = router
         self.inputs = inputs
     }
+    func search(text: String) {
+
+        guard text.count > 2 else {
+            return
+        }
+        router.present(
+            with: MLSearchRouter.PresentationContext.search(text),
+            animated: true
+        )
+
+    }
     
 }

@@ -47,6 +47,26 @@ class MLSearchViewController: UIViewController, BaseViewController {
         // Do any additional bind to view model.
     }
     func setupUI() {
+        searchBar
+            .rx
+            .text
+            .orEmpty
+            .throttle(DispatchTimeInterval.milliseconds(300), scheduler: MainScheduler.instance)
+            .subscribe(onNext: { text in
+                Logger.shared.log(.debug, text)
+                //TODO: - se debe indexar la lista para los elementos buscados.
+            })
+            .disposed(by: disposeBag)
 
+        searchBar
+            .rx
+            .searchButtonClicked
+            .subscribe(onNext: {
+                self.searchBar.resignFirstResponder()
+                if let searchText = self.searchBar.text {
+                    self.viewModel.search(text: searchText)
+                }
+            })
+            .disposed(by: disposeBag)
     }
 }

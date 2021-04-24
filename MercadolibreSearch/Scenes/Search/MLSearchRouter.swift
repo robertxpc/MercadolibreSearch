@@ -10,7 +10,7 @@ import UIKit
 class MLSearchRouter: BaseRouter {
     
     enum PresentationContext {
-
+        case search(String)
     }
 
     weak var baseViewController: UIViewController?
@@ -23,6 +23,10 @@ class MLSearchRouter: BaseRouter {
         guard let presentationContext = context as? PresentationContext else {
             assertionFailure("The context type missmatch")
             return
+        }
+        switch presentationContext {
+        case .search(let text):
+            Logger.shared.log(.debug, "go to search result with \(text)")
         }
         
     }
