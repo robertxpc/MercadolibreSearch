@@ -41,6 +41,7 @@
                     <connections>
                         <outlet property="searchBar" destination="ie3-au-yWd" id="Ic8-AT-VAH"/>
                         <outlet property="tableView" destination="1ZL-wc-txV" id="KzN-w3-1O0"/>
+                        <segue destination="J5N-PE-fSk" kind="show" id="Nwu-po-jQ6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ive-V7-9lA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -68,10 +69,46 @@
             </objects>
             <point key="canvasLocation" x="-590" y="-108"/>
         </scene>
+        <!--Search Result View Controller-->
+        <scene sceneID="XpR-MN-3Qt">
+            <objects>
+                <viewController storyboardIdentifier="SearchResult" useStoryboardIdentifierAsRestorationIdentifier="YES" id="J5N-PE-fSk" customClass="MLSearchResultViewController" customModule="MercadolibreSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gNO-o6-Xkh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="26A-9z-rSn">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewLayout key="collectionViewLayout" id="Uc8-39-nZV" customClass="MLSeachResultCollectionViewLayout" customModule="MercadolibreSearch" customModuleProvider="target"/>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zAH-p9-3WJ"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="26A-9z-rSn" firstAttribute="leading" secondItem="zAH-p9-3WJ" secondAttribute="leading" id="6hq-En-hsX"/>
+                            <constraint firstAttribute="bottom" secondItem="26A-9z-rSn" secondAttribute="bottom" id="Dym-P1-79a"/>
+                            <constraint firstItem="26A-9z-rSn" firstAttribute="top" secondItem="zAH-p9-3WJ" secondAttribute="top" id="F7N-Og-GBO"/>
+                            <constraint firstItem="zAH-p9-3WJ" firstAttribute="trailing" secondItem="26A-9z-rSn" secondAttribute="trailing" id="z4F-29-cKh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ouX-2b-5Tb"/>
+                    <connections>
+                        <outlet property="collectionView" destination="26A-9z-rSn" id="0B4-wV-pYs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MBe-Ze-dE1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1177" y="-108"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

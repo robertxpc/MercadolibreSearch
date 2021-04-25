@@ -10,3 +10,10 @@
 "no_product_available" = "No hay Productos disponibles en este momento para su busqueda.";
 "close" = "Cerrar";
 "retry" = "Reintentar";
+
+"discount_format" = "%d%% OFF";
+"installments_format" = "en %@ %@";
+"not_rate_installment" = "sin interés";
+"free_shipping" = "Envío gratis";
+"condition_status_used" = "Usado";
+"condition_status_new" = "Nuevo";

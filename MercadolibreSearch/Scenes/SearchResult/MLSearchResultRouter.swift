@@ -1,15 +1,16 @@
 //
-//  MLSearchRouter.swift
+//  MLSearchResultRouter.swift
 //  MercadolibreSearch
 //
-//  Created by Roberto Parra Castillo on 18-04-21.
+//  Created by Roberto Parra Castillo on 24-04-21.
 //
 
 import UIKit
 
-class MLSearchRouter: BaseRouter {
+class MLSearchResultRouter: BaseRouter {
     
     enum PresentationContext {
+        case itemDetail(MLItem)
         case search(String)
     }
 
@@ -25,6 +26,9 @@ class MLSearchRouter: BaseRouter {
             return
         }
         switch presentationContext {
+        case .itemDetail(let item):
+            Logger.shared.log(.debug, "show item detail: \(item.title)")
+
         case .search(let text):
             let searchResult = StoryboardScene.Main.searchResult.instantiate()
 
@@ -40,7 +44,6 @@ class MLSearchRouter: BaseRouter {
             (viewController ?? baseViewController)?.navigationController?
                 .pushViewController(searchResult, animated: animated)
         }
-        
     }
     
     func dismiss(animated: Bool, context: Any?, completion: (() -> Void)?) {

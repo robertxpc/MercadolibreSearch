@@ -41,6 +41,22 @@
 		022614BF2637F81400043268 /* MLSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022614BC2637F81400043268 /* MLSearchViewModel.swift */; };
 		022614D62637F81400043268 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 022614D52637F81400043268 /* swiftgen.yml */; };
 		0226150F2637F81400043268 /* StoryboardScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0226150E2637F81400043268 /* StoryboardScenes.swift */; };
+		022615172637F81400043268 /* MLSearchResultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022615142637F81400043268 /* MLSearchResultRouter.swift */; };
+		022615182637F81400043268 /* MLSearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022615152637F81400043268 /* MLSearchResultViewController.swift */; };
+		022615192637F81400043268 /* MLSearchResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022615162637F81400043268 /* MLSearchResultViewModel.swift */; };
+		0226151E2637F81400043268 /* MLResponseListPaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0226151D2637F81400043268 /* MLResponseListPaging.swift */; };
+		022615252637F81400043268 /* MLSearchItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022615232637F81400043268 /* MLSearchItemCell.swift */; };
+		022615262637F81400043268 /* MLSearchItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 022615242637F81400043268 /* MLSearchItemCell.xib */; };
+		0226152F2637F81400043268 /* MLSeachResultCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0226152E2637F81400043268 /* MLSeachResultCollectionViewLayout.swift */; };
+		022615372637F81400043268 /* UIScrollView+Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022615362637F81400043268 /* UIScrollView+Reactive.swift */; };
+		0226153E2637F81400043268 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0226153D2637F81400043268 /* UIImageView+Extensions.swift */; };
+		022615432637F81400043268 /* MLInstallments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022615422637F81400043268 /* MLInstallments.swift */; };
+		022615482637F81400043268 /* MLShippingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022615472637F81400043268 /* MLShippingInfo.swift */; };
+		0226154D2637F81400043268 /* MLItemCoditionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0226154C2637F81400043268 /* MLItemCoditionStatus.swift */; };
+		022615532637F81400043268 /* NumberFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022615522637F81400043268 /* NumberFormatter+Extensions.swift */; };
+		0226155B2637F81400043268 /* MLInstallments+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0226155A2637F81400043268 /* MLInstallments+Extensions.swift */; };
+		022615602637F81400043268 /* MLItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0226155F2637F81400043268 /* MLItem+Extensions.swift */; };
+		022615652637F81400043268 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022615642637F81400043268 /* Utilities.swift */; };
 		A80B61A0195C390D9A373E20 /* Pods_MercadolibreSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 445734031404E0FE223F229D /* Pods_MercadolibreSearch.framework */; };
 		C06E3E0687987123CF2D3919 /* Pods_MercadolibreSearch_MercadolibreSearchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAD200124A418CD7AC4C19F /* Pods_MercadolibreSearch_MercadolibreSearchUITests.framework */; };
 		CEB053A25333F40BAFD83708 /* Pods_MercadolibreSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCA1198D6B8AB676CAAA213 /* Pods_MercadolibreSearchTests.framework */; };
@@ -104,6 +120,22 @@
 		022614BC2637F81400043268 /* MLSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLSearchViewModel.swift; sourceTree = "<group>"; };
 		022614D52637F81400043268 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		0226150E2637F81400043268 /* StoryboardScenes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardScenes.swift; sourceTree = "<group>"; };
+		022615142637F81400043268 /* MLSearchResultRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLSearchResultRouter.swift; sourceTree = "<group>"; };
+		022615152637F81400043268 /* MLSearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLSearchResultViewController.swift; sourceTree = "<group>"; };
+		022615162637F81400043268 /* MLSearchResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLSearchResultViewModel.swift; sourceTree = "<group>"; };
+		0226151D2637F81400043268 /* MLResponseListPaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLResponseListPaging.swift; sourceTree = "<group>"; };
+		022615232637F81400043268 /* MLSearchItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLSearchItemCell.swift; sourceTree = "<group>"; };
+		022615242637F81400043268 /* MLSearchItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MLSearchItemCell.xib; sourceTree = "<group>"; };
+		0226152E2637F81400043268 /* MLSeachResultCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLSeachResultCollectionViewLayout.swift; sourceTree = "<group>"; };
+		022615362637F81400043268 /* UIScrollView+Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Reactive.swift"; sourceTree = "<group>"; };
+		0226153D2637F81400043268 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		022615422637F81400043268 /* MLInstallments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLInstallments.swift; sourceTree = "<group>"; };
+		022615472637F81400043268 /* MLShippingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLShippingInfo.swift; sourceTree = "<group>"; };
+		0226154C2637F81400043268 /* MLItemCoditionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLItemCoditionStatus.swift; sourceTree = "<group>"; };
+		022615522637F81400043268 /* NumberFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		0226155A2637F81400043268 /* MLInstallments+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MLInstallments+Extensions.swift"; sourceTree = "<group>"; };
+		0226155F2637F81400043268 /* MLItem+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MLItem+Extensions.swift"; sourceTree = "<group>"; };
+		022615642637F81400043268 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		193D502F5EED16C63D92BE0E /* Pods-MercadolibreSearch-MercadolibreSearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadolibreSearch-MercadolibreSearchUITests.release.xcconfig"; path = "Target Support Files/Pods-MercadolibreSearch-MercadolibreSearchUITests/Pods-MercadolibreSearch-MercadolibreSearchUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2FCA1198D6B8AB676CAAA213 /* Pods_MercadolibreSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadolibreSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		445734031404E0FE223F229D /* Pods_MercadolibreSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadolibreSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -211,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				022614962637F81400043268 /* Logger.swift */,
+				022615642637F81400043268 /* Utilities.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -221,6 +254,10 @@
 				022614542637F81400043268 /* MLError.swift */,
 				022614892637F81400043268 /* MLResponseList.swift */,
 				022614912637F81400043268 /* MLItem.swift */,
+				0226151D2637F81400043268 /* MLResponseListPaging.swift */,
+				022615422637F81400043268 /* MLInstallments.swift */,
+				022615472637F81400043268 /* MLShippingInfo.swift */,
+				0226154C2637F81400043268 /* MLItemCoditionStatus.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -228,9 +265,9 @@
 		022614122637F81400043268 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				0226145F2637F81400043268 /* UIView+Extensions.swift */,
-				022614672637F81400043268 /* MLError+Extensions.swift */,
-				0226146C2637F81400043268 /* String+Extensions.swift */,
+				022615512637F81400043268 /* Class */,
+				0226153C2637F81400043268 /* Model */,
+				0226153B2637F81400043268 /* UI */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -304,6 +341,7 @@
 			children = (
 				022613E02637F81400043268 /* Main.storyboard */,
 				022614B92637F81400043268 /* Search */,
+				022615132637F81400043268 /* SearchResult */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -325,6 +363,64 @@
 				022614D52637F81400043268 /* swiftgen.yml */,
 			);
 			path = SwiftGen;
+			sourceTree = "<group>";
+		};
+		022615132637F81400043268 /* SearchResult */ = {
+			isa = PBXGroup;
+			children = (
+				0226152D2637F81400043268 /* CellectionViewLayout */,
+				022615222637F81400043268 /* Cell */,
+				022615142637F81400043268 /* MLSearchResultRouter.swift */,
+				022615152637F81400043268 /* MLSearchResultViewController.swift */,
+				022615162637F81400043268 /* MLSearchResultViewModel.swift */,
+			);
+			path = SearchResult;
+			sourceTree = "<group>";
+		};
+		022615222637F81400043268 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				022615232637F81400043268 /* MLSearchItemCell.swift */,
+				022615242637F81400043268 /* MLSearchItemCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		0226152D2637F81400043268 /* CellectionViewLayout */ = {
+			isa = PBXGroup;
+			children = (
+				0226152E2637F81400043268 /* MLSeachResultCollectionViewLayout.swift */,
+			);
+			path = CellectionViewLayout;
+			sourceTree = "<group>";
+		};
+		0226153B2637F81400043268 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				022615362637F81400043268 /* UIScrollView+Reactive.swift */,
+				0226145F2637F81400043268 /* UIView+Extensions.swift */,
+				0226153D2637F81400043268 /* UIImageView+Extensions.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		0226153C2637F81400043268 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				022614672637F81400043268 /* MLError+Extensions.swift */,
+				0226155A2637F81400043268 /* MLInstallments+Extensions.swift */,
+				0226155F2637F81400043268 /* MLItem+Extensions.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		022615512637F81400043268 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				0226146C2637F81400043268 /* String+Extensions.swift */,
+				022615522637F81400043268 /* NumberFormatter+Extensions.swift */,
+			);
+			path = Class;
 			sourceTree = "<group>";
 		};
 		9AAB6624069DD68DFA989E2F /* Pods */ = {
@@ -463,6 +559,7 @@
 				022613EA2637F81400043268 /* LaunchScreen.storyboard in Resources */,
 				022614D62637F81400043268 /* swiftgen.yml in Resources */,
 				022614732637F81400043268 /* Localizable.strings in Resources */,
+				022615262637F81400043268 /* MLSearchItemCell.xib in Resources */,
 				022613E72637F81400043268 /* Assets.xcassets in Resources */,
 				0226144B2637F81400043268 /* MLLoadingView.xib in Resources */,
 				022614462637F81400043268 /* MLErrorView.xib in Resources */,
@@ -629,6 +726,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				022615182637F81400043268 /* MLSearchResultViewController.swift in Sources */,
 				022614972637F81400043268 /* Logger.swift in Sources */,
 				022614172637F81400043268 /* BaseViewController.swift in Sources */,
 				0226146D2637F81400043268 /* String+Extensions.swift in Sources */,
@@ -636,22 +734,36 @@
 				022614682637F81400043268 /* MLError+Extensions.swift in Sources */,
 				022614552637F81400043268 /* MLError.swift in Sources */,
 				022614BE2637F81400043268 /* MLSearchViewController.swift in Sources */,
+				022615252637F81400043268 /* MLSearchItemCell.swift in Sources */,
+				0226152F2637F81400043268 /* MLSeachResultCollectionViewLayout.swift in Sources */,
 				022613DF2637F81400043268 /* ViewController.swift in Sources */,
 				022614BD2637F81400043268 /* MLSearchRouter.swift in Sources */,
 				022614412637F81400043268 /* MLErrorView.swift in Sources */,
+				0226151E2637F81400043268 /* MLResponseListPaging.swift in Sources */,
+				0226153E2637F81400043268 /* UIImageView+Extensions.swift in Sources */,
 				022614242637F81400043268 /* BaseRouter.swift in Sources */,
+				022615432637F81400043268 /* MLInstallments.swift in Sources */,
+				022615602637F81400043268 /* MLItem+Extensions.swift in Sources */,
 				0226150F2637F81400043268 /* StoryboardScenes.swift in Sources */,
+				022615172637F81400043268 /* MLSearchResultRouter.swift in Sources */,
 				022614B12637F81400043268 /* MLBaseXibView.swift in Sources */,
 				022613DB2637F81400043268 /* AppDelegate.swift in Sources */,
 				022614502637F81400043268 /* MLLoadingView.swift in Sources */,
 				022613E52637F81400043268 /* MercadolibreSearch.xcdatamodeld in Sources */,
 				022613DD2637F81400043268 /* SceneDelegate.swift in Sources */,
+				022615482637F81400043268 /* MLShippingInfo.swift in Sources */,
 				022614922637F81400043268 /* MLItem.swift in Sources */,
+				022615532637F81400043268 /* NumberFormatter+Extensions.swift in Sources */,
 				0226148A2637F81400043268 /* MLResponseList.swift in Sources */,
+				022615372637F81400043268 /* UIScrollView+Reactive.swift in Sources */,
+				022615652637F81400043268 /* Utilities.swift in Sources */,
 				022614852637F81400043268 /* APIRestClient+Protocol.swift in Sources */,
 				0226141F2637F81400043268 /* BaseViewModel.swift in Sources */,
+				0226154D2637F81400043268 /* MLItemCoditionStatus.swift in Sources */,
 				0226147B2637F81400043268 /* MLServiceProtocol.swift in Sources */,
 				022614802637F81400043268 /* APIRestClient.swift in Sources */,
+				0226155B2637F81400043268 /* MLInstallments+Extensions.swift in Sources */,
+				022615192637F81400043268 /* MLSearchResultViewModel.swift in Sources */,
 				022614602637F81400043268 /* UIView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

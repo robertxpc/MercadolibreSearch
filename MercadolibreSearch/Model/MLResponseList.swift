@@ -10,8 +10,9 @@ import UIKit
 struct MLResponseList<Type: Decodable>: Decodable {
 
     var results: [Type]?
+    var paging: MLResponseListPaging?
 
     private enum CodingKeys: String, CodingKey {
-        case results
+        case results, paging
     }
 }
