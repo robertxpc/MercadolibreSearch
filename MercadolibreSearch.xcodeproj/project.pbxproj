@@ -57,6 +57,11 @@
 		0226155B2637F81400043268 /* MLInstallments+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0226155A2637F81400043268 /* MLInstallments+Extensions.swift */; };
 		022615602637F81400043268 /* MLItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0226155F2637F81400043268 /* MLItem+Extensions.swift */; };
 		022615652637F81400043268 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022615642637F81400043268 /* Utilities.swift */; };
+		0226156A2637F81400043268 /* MockMLServices+MLServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022615692637F81400043268 /* MockMLServices+MLServiceProtocol.swift */; };
+		0226156F2637F81400043268 /* done-search-list.json in Resources */ = {isa = PBXBuildFile; fileRef = 0226156E2637F81400043268 /* done-search-list.json */; };
+		022615742637F81400043268 /* empty-search-list.json in Resources */ = {isa = PBXBuildFile; fileRef = 022615732637F81400043268 /* empty-search-list.json */; };
+		0226157E2637F81400043268 /* SearchResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0226157D2637F81400043268 /* SearchResultTests.swift */; };
+		022615882637F81400043268 /* RouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022615872637F81400043268 /* RouterTest.swift */; };
 		A80B61A0195C390D9A373E20 /* Pods_MercadolibreSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 445734031404E0FE223F229D /* Pods_MercadolibreSearch.framework */; };
 		C06E3E0687987123CF2D3919 /* Pods_MercadolibreSearch_MercadolibreSearchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAD200124A418CD7AC4C19F /* Pods_MercadolibreSearch_MercadolibreSearchUITests.framework */; };
 		CEB053A25333F40BAFD83708 /* Pods_MercadolibreSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCA1198D6B8AB676CAAA213 /* Pods_MercadolibreSearchTests.framework */; };
@@ -136,6 +141,11 @@
 		0226155A2637F81400043268 /* MLInstallments+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MLInstallments+Extensions.swift"; sourceTree = "<group>"; };
 		0226155F2637F81400043268 /* MLItem+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MLItem+Extensions.swift"; sourceTree = "<group>"; };
 		022615642637F81400043268 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		022615692637F81400043268 /* MockMLServices+MLServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MockMLServices+MLServiceProtocol.swift"; sourceTree = "<group>"; };
+		0226156E2637F81400043268 /* done-search-list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "done-search-list.json"; sourceTree = "<group>"; };
+		022615732637F81400043268 /* empty-search-list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "empty-search-list.json"; sourceTree = "<group>"; };
+		0226157D2637F81400043268 /* SearchResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTests.swift; sourceTree = "<group>"; };
+		022615872637F81400043268 /* RouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTest.swift; sourceTree = "<group>"; };
 		193D502F5EED16C63D92BE0E /* Pods-MercadolibreSearch-MercadolibreSearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadolibreSearch-MercadolibreSearchUITests.release.xcconfig"; path = "Target Support Files/Pods-MercadolibreSearch-MercadolibreSearchUITests/Pods-MercadolibreSearch-MercadolibreSearchUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2FCA1198D6B8AB676CAAA213 /* Pods_MercadolibreSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadolibreSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		445734031404E0FE223F229D /* Pods_MercadolibreSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadolibreSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,7 +233,8 @@
 		022613F32637F81400043268 /* MercadolibreSearchTests */ = {
 			isa = PBXGroup;
 			children = (
-				0226149B2637F81400043268 /* Network */,
+				022615852637F81400043268 /* Helpers */,
+				0226157B2637F81400043268 /* Scenes */,
 				022613F42637F81400043268 /* MercadolibreSearchTests.swift */,
 				022613F62637F81400043268 /* Info.plist */,
 			);
@@ -325,6 +336,7 @@
 			children = (
 				022614A42637F81400043268 /* Responses */,
 				0226149F2637F81400043268 /* MockMLServices.swift */,
+				022615692637F81400043268 /* MockMLServices+MLServiceProtocol.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -332,6 +344,8 @@
 		022614A42637F81400043268 /* Responses */ = {
 			isa = PBXGroup;
 			children = (
+				0226156E2637F81400043268 /* done-search-list.json */,
+				022615732637F81400043268 /* empty-search-list.json */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -421,6 +435,39 @@
 				022615522637F81400043268 /* NumberFormatter+Extensions.swift */,
 			);
 			path = Class;
+			sourceTree = "<group>";
+		};
+		0226157B2637F81400043268 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				0226157C2637F81400043268 /* SearchResult */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		0226157C2637F81400043268 /* SearchResult */ = {
+			isa = PBXGroup;
+			children = (
+				0226157D2637F81400043268 /* SearchResultTests.swift */,
+			);
+			path = SearchResult;
+			sourceTree = "<group>";
+		};
+		022615852637F81400043268 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				022615862637F81400043268 /* Router */,
+				0226149B2637F81400043268 /* Network */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		022615862637F81400043268 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				022615872637F81400043268 /* RouterTest.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		9AAB6624069DD68DFA989E2F /* Pods */ = {
@@ -571,6 +618,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				022615742637F81400043268 /* empty-search-list.json in Resources */,
+				0226156F2637F81400043268 /* done-search-list.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -774,6 +823,9 @@
 			files = (
 				022614A02637F81400043268 /* MockMLServices.swift in Sources */,
 				022613F52637F81400043268 /* MercadolibreSearchTests.swift in Sources */,
+				0226157E2637F81400043268 /* SearchResultTests.swift in Sources */,
+				022615882637F81400043268 /* RouterTest.swift in Sources */,
+				0226156A2637F81400043268 /* MockMLServices+MLServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,29 @@
+{
+  "site_id": "MLC",
+  "query": "random search",
+  "paging": {
+    "total": 0,
+    "primary_results": 1000,
+    "offset": 0,
+    "limit": 5
+  },
+  "results": [],
+  "secondary_results": [],
+  "related_results": [],
+  "sort": {
+    "id": "relevance",
+    "name": "Más relevantes"
+  },
+  "available_sorts": [
+    {
+      "id": "price_asc",
+      "name": "Menor precio"
+    },
+    {
+      "id": "price_desc",
+      "name": "Mayor precio"
+    }
+  ],
+  "filters":[],
+  "available_filters": []
+}
