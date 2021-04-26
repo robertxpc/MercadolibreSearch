@@ -70,6 +70,9 @@
 		02278A372635FD4E00346078 /* MLCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02278A362635FD4E00346078 /* MLCarouselView.swift */; };
 		02278A402635FD7F00346078 /* MLCarouselView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02278A3F2635FD7F00346078 /* MLCarouselView.xib */; };
 		02278A462635FDC300346078 /* MLExpandibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02278A452635FDC300346078 /* MLExpandibleView.swift */; };
+		02278A4F26364F2200346078 /* ItemDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02278A4E26364F2200346078 /* ItemDetailTests.swift */; };
+		02278A5726364F8B00346078 /* done-item-detail.json in Resources */ = {isa = PBXBuildFile; fileRef = 02278A5626364F8B00346078 /* done-item-detail.json */; };
+		02278A5C26364FAA00346078 /* done-item-description.json in Resources */ = {isa = PBXBuildFile; fileRef = 02278A5B26364FAA00346078 /* done-item-description.json */; };
 		A80B61A0195C390D9A373E20 /* Pods_MercadolibreSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 445734031404E0FE223F229D /* Pods_MercadolibreSearch.framework */; };
 		C06E3E0687987123CF2D3919 /* Pods_MercadolibreSearch_MercadolibreSearchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAD200124A418CD7AC4C19F /* Pods_MercadolibreSearch_MercadolibreSearchUITests.framework */; };
 		CEB053A25333F40BAFD83708 /* Pods_MercadolibreSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCA1198D6B8AB676CAAA213 /* Pods_MercadolibreSearchTests.framework */; };
@@ -162,6 +165,9 @@
 		02278A362635FD4E00346078 /* MLCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLCarouselView.swift; sourceTree = "<group>"; };
 		02278A3F2635FD7F00346078 /* MLCarouselView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MLCarouselView.xib; sourceTree = "<group>"; };
 		02278A452635FDC300346078 /* MLExpandibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLExpandibleView.swift; sourceTree = "<group>"; };
+		02278A4E26364F2200346078 /* ItemDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailTests.swift; sourceTree = "<group>"; };
+		02278A5626364F8B00346078 /* done-item-detail.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "done-item-detail.json"; sourceTree = "<group>"; };
+		02278A5B26364FAA00346078 /* done-item-description.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "done-item-description.json"; sourceTree = "<group>"; };
 		193D502F5EED16C63D92BE0E /* Pods-MercadolibreSearch-MercadolibreSearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadolibreSearch-MercadolibreSearchUITests.release.xcconfig"; path = "Target Support Files/Pods-MercadolibreSearch-MercadolibreSearchUITests/Pods-MercadolibreSearch-MercadolibreSearchUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2FCA1198D6B8AB676CAAA213 /* Pods_MercadolibreSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadolibreSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		445734031404E0FE223F229D /* Pods_MercadolibreSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadolibreSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -366,6 +372,8 @@
 			children = (
 				0226156E2637F81400043268 /* done-search-list.json */,
 				022615732637F81400043268 /* empty-search-list.json */,
+				02278A5626364F8B00346078 /* done-item-detail.json */,
+				02278A5B26364FAA00346078 /* done-item-description.json */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -461,6 +469,7 @@
 		0226157B2637F81400043268 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				02278A4D26364F0700346078 /* ItemDetail */,
 				0226157C2637F81400043268 /* SearchResult */,
 			);
 			path = Scenes;
@@ -516,6 +525,14 @@
 				02278A452635FDC300346078 /* MLExpandibleView.swift */,
 			);
 			path = ExpandibleView;
+			sourceTree = "<group>";
+		};
+		02278A4D26364F0700346078 /* ItemDetail */ = {
+			isa = PBXGroup;
+			children = (
+				02278A4E26364F2200346078 /* ItemDetailTests.swift */,
+			);
+			path = ItemDetail;
 			sourceTree = "<group>";
 		};
 		9AAB6624069DD68DFA989E2F /* Pods */ = {
@@ -668,6 +685,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				022615742637F81400043268 /* empty-search-list.json in Resources */,
+				02278A5C26364FAA00346078 /* done-item-description.json in Resources */,
+				02278A5726364F8B00346078 /* done-item-detail.json in Resources */,
 				0226156F2637F81400043268 /* done-search-list.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -882,6 +901,7 @@
 				0226157E2637F81400043268 /* SearchResultTests.swift in Sources */,
 				022615882637F81400043268 /* RouterTest.swift in Sources */,
 				0226156A2637F81400043268 /* MockMLServices+MLServiceProtocol.swift in Sources */,
+				02278A4F26364F2200346078 /* ItemDetailTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
