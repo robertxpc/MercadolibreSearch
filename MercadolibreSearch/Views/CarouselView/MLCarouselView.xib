@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="woI-Yf-gl2" customClass="MLCarouselView" customModule="MercadolibreSearch" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVG-rA-1C3">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Web-pR-rgr">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="448"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WPj-ay-PHy">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="448"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="240" id="cEQ-7K-h4J"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Web-pR-rgr" firstAttribute="bottom" secondItem="wCX-lF-qdi" secondAttribute="bottom" id="JKi-x9-mhp"/>
+                        <constraint firstItem="Web-pR-rgr" firstAttribute="leading" secondItem="wCX-lF-qdi" secondAttribute="leading" id="fGd-qS-3xt"/>
+                        <constraint firstItem="Web-pR-rgr" firstAttribute="top" secondItem="CCR-FQ-XIH" secondAttribute="top" id="iWp-L0-YFa"/>
+                        <constraint firstItem="CCR-FQ-XIH" firstAttribute="bottom" secondItem="Web-pR-rgr" secondAttribute="bottom" id="igL-ny-jnt"/>
+                        <constraint firstItem="Web-pR-rgr" firstAttribute="top" secondItem="wCX-lF-qdi" secondAttribute="top" id="w8D-MC-tiA"/>
+                        <constraint firstItem="Web-pR-rgr" firstAttribute="trailing" secondItem="wCX-lF-qdi" secondAttribute="trailing" id="xO7-BK-hjd"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="wCX-lF-qdi"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="CCR-FQ-XIH"/>
+                    <connections>
+                        <outlet property="delegate" destination="woI-Yf-gl2" id="XVa-C8-YRH"/>
+                    </connections>
+                </scrollView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DEj-xe-cHD">
+                    <rect key="frame" x="348" y="8" width="50" height="26"/>
+                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="Xcg-Yv-elg"/>
+                        <constraint firstAttribute="height" constant="26" id="bLg-dC-IrJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="13"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="GJS-NJ-Siv"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="qVG-rA-1C3" firstAttribute="leading" secondItem="woI-Yf-gl2" secondAttribute="leading" id="0YT-Ri-pKS"/>
+                <constraint firstAttribute="trailing" secondItem="DEj-xe-cHD" secondAttribute="trailing" constant="16" id="FRc-V3-Nwo"/>
+                <constraint firstItem="DEj-xe-cHD" firstAttribute="top" secondItem="woI-Yf-gl2" secondAttribute="top" constant="8" id="R6l-me-u46"/>
+                <constraint firstAttribute="bottom" secondItem="qVG-rA-1C3" secondAttribute="bottom" id="eMa-Rj-bf3"/>
+                <constraint firstItem="qVG-rA-1C3" firstAttribute="top" secondItem="woI-Yf-gl2" secondAttribute="top" id="i4H-u1-RFW"/>
+                <constraint firstAttribute="trailing" secondItem="qVG-rA-1C3" secondAttribute="trailing" id="qG0-m8-u7g"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="indexLabel" destination="DEj-xe-cHD" id="rLN-Sr-X7E"/>
+                <outlet property="scrollView" destination="qVG-rA-1C3" id="IcG-Yf-4WB"/>
+                <outlet property="stackView" destination="Web-pR-rgr" id="pA1-LK-hBl"/>
+            </connections>
+            <point key="canvasLocation" x="69.565217391304358" y="-95.089285714285708"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

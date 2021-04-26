@@ -19,6 +19,8 @@ internal enum StoryboardScene {
 
     internal static let searchResult = SceneType<MercadolibreSearch.MLSearchResultViewController>(storyboard: Main.self, identifier: "SearchResult")
 
+    internal static let itemDetail = SceneType<MercadolibreSearch.MLItemDetailViewController>(storyboard: Main.self, identifier: "itemDetail")
+
     internal static let searchView = SceneType<MercadolibreSearch.MLSearchViewController>(storyboard: Main.self, identifier: "searchView")
   }
 }

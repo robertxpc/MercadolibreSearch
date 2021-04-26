@@ -21,9 +21,10 @@ struct MLItem: Decodable {
     var condition: MLItemCoditionStatus
     var acceptsMercadopago: Bool
     var availableQuantity: Int
-
+    var pictures: [MLItemPicture]?
+    
     private enum CodingKeys: String, CodingKey {
-        case id, title, price, thumbnail, installments, shipping, condition
+        case id, title, price, thumbnail, installments, shipping, condition, pictures
         case currencyId = "currency_id"
         case soldQuantity = "sold_quantity"
         case originalPrice = "original_price"

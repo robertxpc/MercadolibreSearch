@@ -27,8 +27,20 @@ class MLSearchResultRouter: BaseRouter {
         }
         switch presentationContext {
         case .itemDetail(let item):
-            Logger.shared.log(.debug, "show item detail: \(item.title)")
+            let searchResult = StoryboardScene.Main.itemDetail.instantiate()
 
+            let viewModel = MLItemDetailViewModel(
+                router: MLItemDetailRouter(baseViewController: searchResult),
+                inputs: MLItemDetailViewModel.Inputs(
+                    repository: APIRestClient.shared,
+                    item: item
+                )
+            )
+            searchResult.viewModel = viewModel
+
+            (viewController ?? baseViewController)?.navigationController?
+                .pushViewController(searchResult, animated: animated)
+            
         case .search(let text):
             let searchResult = StoryboardScene.Main.searchResult.instantiate()
 

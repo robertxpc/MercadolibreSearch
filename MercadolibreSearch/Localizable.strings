@@ -17,3 +17,10 @@
 "free_shipping" = "Envío gratis";
 "condition_status_used" = "Usado";
 "condition_status_new" = "Nuevo";
+
+"sold_quantity_formatter_s" = "%d vendido";
+"sold_quantity_formatter_p" = "%d vendidos";
+"stock_format_s" = "Stock: %d disponible";
+"stock_format_p" = "Stock: %d disponibles";
+"stock_format_title" = "Stock:";
+"description_title" = "Descripción";

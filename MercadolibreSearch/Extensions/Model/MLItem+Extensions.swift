@@ -26,4 +26,27 @@ extension MLItem {
         }
         return nil
     }
+    
+    var formattedAvailableQuantity: String {
+        String(format: "stock_format_\(availableQuantity == 1 ? "s" : "p")".localized,
+            availableQuantity
+        )
+    }
+    
+    func soldQuantityAndConditionString(separator: String = " | ") -> String {
+        var conditionText = [String]()
+        switch condition {
+        case .used: conditionText.append("condition_status_used".localized)
+        case .new: conditionText.append("condition_status_new".localized)
+        default: break
+        }
+
+        if soldQuantity > 0 {
+            let formaterMode = soldQuantity == 1 ? "s" : "p"
+            conditionText.append(
+                String(format: "sold_quantity_formatter_\(formaterMode)".localized, soldQuantity))
+        }
+        return conditionText.joined(separator: separator)
+    }
+    
 }

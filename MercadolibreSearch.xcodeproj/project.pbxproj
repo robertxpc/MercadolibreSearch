@@ -62,6 +62,14 @@
 		022615742637F81400043268 /* empty-search-list.json in Resources */ = {isa = PBXBuildFile; fileRef = 022615732637F81400043268 /* empty-search-list.json */; };
 		0226157E2637F81400043268 /* SearchResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0226157D2637F81400043268 /* SearchResultTests.swift */; };
 		022615882637F81400043268 /* RouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022615872637F81400043268 /* RouterTest.swift */; };
+		022615932637F81400043268 /* MLItemDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022615902637F81400043268 /* MLItemDetailRouter.swift */; };
+		022615942637F81400043268 /* MLItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022615912637F81400043268 /* MLItemDetailViewController.swift */; };
+		022615952637F81400043268 /* MLItemDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022615922637F81400043268 /* MLItemDetailViewModel.swift */; };
+		0226159D2637F81400043268 /* MLItemDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0226159C2637F81400043268 /* MLItemDescription.swift */; };
+		022615A22637F81400043268 /* MLItemPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022615A12637F81400043268 /* MLItemPicture.swift */; };
+		02278A372635FD4E00346078 /* MLCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02278A362635FD4E00346078 /* MLCarouselView.swift */; };
+		02278A402635FD7F00346078 /* MLCarouselView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02278A3F2635FD7F00346078 /* MLCarouselView.xib */; };
+		02278A462635FDC300346078 /* MLExpandibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02278A452635FDC300346078 /* MLExpandibleView.swift */; };
 		A80B61A0195C390D9A373E20 /* Pods_MercadolibreSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 445734031404E0FE223F229D /* Pods_MercadolibreSearch.framework */; };
 		C06E3E0687987123CF2D3919 /* Pods_MercadolibreSearch_MercadolibreSearchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAD200124A418CD7AC4C19F /* Pods_MercadolibreSearch_MercadolibreSearchUITests.framework */; };
 		CEB053A25333F40BAFD83708 /* Pods_MercadolibreSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCA1198D6B8AB676CAAA213 /* Pods_MercadolibreSearchTests.framework */; };
@@ -146,6 +154,14 @@
 		022615732637F81400043268 /* empty-search-list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "empty-search-list.json"; sourceTree = "<group>"; };
 		0226157D2637F81400043268 /* SearchResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTests.swift; sourceTree = "<group>"; };
 		022615872637F81400043268 /* RouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTest.swift; sourceTree = "<group>"; };
+		022615902637F81400043268 /* MLItemDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLItemDetailRouter.swift; sourceTree = "<group>"; };
+		022615912637F81400043268 /* MLItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLItemDetailViewController.swift; sourceTree = "<group>"; };
+		022615922637F81400043268 /* MLItemDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLItemDetailViewModel.swift; sourceTree = "<group>"; };
+		0226159C2637F81400043268 /* MLItemDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLItemDescription.swift; sourceTree = "<group>"; };
+		022615A12637F81400043268 /* MLItemPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLItemPicture.swift; sourceTree = "<group>"; };
+		02278A362635FD4E00346078 /* MLCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLCarouselView.swift; sourceTree = "<group>"; };
+		02278A3F2635FD7F00346078 /* MLCarouselView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MLCarouselView.xib; sourceTree = "<group>"; };
+		02278A452635FDC300346078 /* MLExpandibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLExpandibleView.swift; sourceTree = "<group>"; };
 		193D502F5EED16C63D92BE0E /* Pods-MercadolibreSearch-MercadolibreSearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadolibreSearch-MercadolibreSearchUITests.release.xcconfig"; path = "Target Support Files/Pods-MercadolibreSearch-MercadolibreSearchUITests/Pods-MercadolibreSearch-MercadolibreSearchUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2FCA1198D6B8AB676CAAA213 /* Pods_MercadolibreSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadolibreSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		445734031404E0FE223F229D /* Pods_MercadolibreSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadolibreSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -269,6 +285,8 @@
 				022615422637F81400043268 /* MLInstallments.swift */,
 				022615472637F81400043268 /* MLShippingInfo.swift */,
 				0226154C2637F81400043268 /* MLItemCoditionStatus.swift */,
+				0226159C2637F81400043268 /* MLItemDescription.swift */,
+				022615A12637F81400043268 /* MLItemPicture.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -286,6 +304,8 @@
 		022614132637F81400043268 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				02278A442635FDAB00346078 /* ExpandibleView */,
+				02278A3B2635FD5300346078 /* CarouselView */,
 				022614B02637F81400043268 /* MLBaseXibView.swift */,
 				0226143F2637F81400043268 /* LoadingView */,
 				0226143E2637F81400043268 /* ErrorView */,
@@ -356,6 +376,7 @@
 				022613E02637F81400043268 /* Main.storyboard */,
 				022614B92637F81400043268 /* Search */,
 				022615132637F81400043268 /* SearchResult */,
+				0226158F2637F81400043268 /* ItemDetail */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -468,6 +489,33 @@
 				022615872637F81400043268 /* RouterTest.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		0226158F2637F81400043268 /* ItemDetail */ = {
+			isa = PBXGroup;
+			children = (
+				022615902637F81400043268 /* MLItemDetailRouter.swift */,
+				022615912637F81400043268 /* MLItemDetailViewController.swift */,
+				022615922637F81400043268 /* MLItemDetailViewModel.swift */,
+			);
+			path = ItemDetail;
+			sourceTree = "<group>";
+		};
+		02278A3B2635FD5300346078 /* CarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				02278A362635FD4E00346078 /* MLCarouselView.swift */,
+				02278A3F2635FD7F00346078 /* MLCarouselView.xib */,
+			);
+			path = CarouselView;
+			sourceTree = "<group>";
+		};
+		02278A442635FDAB00346078 /* ExpandibleView */ = {
+			isa = PBXGroup;
+			children = (
+				02278A452635FDC300346078 /* MLExpandibleView.swift */,
+			);
+			path = ExpandibleView;
 			sourceTree = "<group>";
 		};
 		9AAB6624069DD68DFA989E2F /* Pods */ = {
@@ -611,6 +659,7 @@
 				0226144B2637F81400043268 /* MLLoadingView.xib in Resources */,
 				022614462637F81400043268 /* MLErrorView.xib in Resources */,
 				022613E22637F81400043268 /* Main.storyboard in Resources */,
+				02278A402635FD7F00346078 /* MLCarouselView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -789,18 +838,24 @@
 				022614BD2637F81400043268 /* MLSearchRouter.swift in Sources */,
 				022614412637F81400043268 /* MLErrorView.swift in Sources */,
 				0226151E2637F81400043268 /* MLResponseListPaging.swift in Sources */,
+				0226159D2637F81400043268 /* MLItemDescription.swift in Sources */,
 				0226153E2637F81400043268 /* UIImageView+Extensions.swift in Sources */,
 				022614242637F81400043268 /* BaseRouter.swift in Sources */,
 				022615432637F81400043268 /* MLInstallments.swift in Sources */,
 				022615602637F81400043268 /* MLItem+Extensions.swift in Sources */,
+				022615942637F81400043268 /* MLItemDetailViewController.swift in Sources */,
 				0226150F2637F81400043268 /* StoryboardScenes.swift in Sources */,
 				022615172637F81400043268 /* MLSearchResultRouter.swift in Sources */,
+				022615952637F81400043268 /* MLItemDetailViewModel.swift in Sources */,
 				022614B12637F81400043268 /* MLBaseXibView.swift in Sources */,
 				022613DB2637F81400043268 /* AppDelegate.swift in Sources */,
 				022614502637F81400043268 /* MLLoadingView.swift in Sources */,
+				022615932637F81400043268 /* MLItemDetailRouter.swift in Sources */,
+				02278A462635FDC300346078 /* MLExpandibleView.swift in Sources */,
 				022613E52637F81400043268 /* MercadolibreSearch.xcdatamodeld in Sources */,
 				022613DD2637F81400043268 /* SceneDelegate.swift in Sources */,
 				022615482637F81400043268 /* MLShippingInfo.swift in Sources */,
+				022615A22637F81400043268 /* MLItemPicture.swift in Sources */,
 				022614922637F81400043268 /* MLItem.swift in Sources */,
 				022615532637F81400043268 /* NumberFormatter+Extensions.swift in Sources */,
 				0226148A2637F81400043268 /* MLResponseList.swift in Sources */,
@@ -810,6 +865,7 @@
 				0226141F2637F81400043268 /* BaseViewModel.swift in Sources */,
 				0226154D2637F81400043268 /* MLItemCoditionStatus.swift in Sources */,
 				0226147B2637F81400043268 /* MLServiceProtocol.swift in Sources */,
+				02278A372635FD4E00346078 /* MLCarouselView.swift in Sources */,
 				022614802637F81400043268 /* APIRestClient.swift in Sources */,
 				0226155B2637F81400043268 /* MLInstallments+Extensions.swift in Sources */,
 				022615192637F81400043268 /* MLSearchResultViewModel.swift in Sources */,

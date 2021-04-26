@@ -23,5 +23,16 @@ extension APIRestClient: MLServiceProtocol {
             encoding: URLEncoding(destination: .queryString)
         )
     }
-
+    func itemDetail(_ itemId: String) -> Observable<MLItem> {
+        return request(
+            apiPath: "items/\(itemId)",
+            method: .get
+        )
+    }
+    func itemDescription(_ itemId: String) -> Observable<[MLItemDescription]> {
+        return request(
+            apiPath: "items/\(itemId)/descriptions",
+            method: .get
+        )
+    }
 }
