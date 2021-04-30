@@ -5,7 +5,7 @@
 //  Created by Roberto Parra Castillo on 24-04-21.
 //
 
-import UIKit
+import Foundation
 
 extension NumberFormatter {
     static func numberFormater(from currencyCode: String) -> NumberFormatter {

@@ -24,3 +24,7 @@
 "stock_format_p" = "Stock: %d disponibles";
 "stock_format_title" = "Stock:";
 "description_title" = "Descripción";
+"clear_history" = "Limpiar historial";
+"clear_history_answer" = "¿Desea limpiar su historial de busqueda?";
+"cancel" = "Cancelar";
+"clear" = "Limpiar";

@@ -17,6 +17,8 @@ class MLSearchViewController: UIViewController, BaseViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var clearHistoryButton: UIButton!
+    @IBOutlet weak var clearHistoryButtonHeight: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +32,7 @@ class MLSearchViewController: UIViewController, BaseViewController {
         
         setupUI()
         bindViewModel()
+        
         // Do any additional setup after loading the view.
     }
 
@@ -44,29 +47,90 @@ class MLSearchViewController: UIViewController, BaseViewController {
             .error
             .subscribe(onNext: show(error:))
             .disposed(by: disposeBag)
-        // Do any additional bind to view model.
+        
+        viewModel.history.bind(
+            to: tableView.rx.items(
+                cellIdentifier: "MLSearchTableViewCell",
+                cellType: MLSearchTableViewCell.self)
+        ) { _, item, cell in
+            cell.bind(item: item)
+        }.disposed(by: disposeBag)
+        
+        viewModel
+            .history
+            .bind(onNext: {self.clearHistoryButtonHeight.constant = $0.count == 0 ? 0 : 35})
+            .disposed(by: disposeBag)
+        
+        tableView
+            .rx
+            .itemSelected
+            .subscribe(onNext: {self.viewModel.historySelected(index: $0.row)})
+            .disposed(by: disposeBag)
     }
+    
     func setupUI() {
+        
+        clearHistoryButton
+            .rx
+            .tap
+            .subscribe(onNext: clearHistory)
+            .disposed(by: disposeBag)
+        
         searchBar
             .rx
             .text
             .orEmpty
             .throttle(DispatchTimeInterval.milliseconds(300), scheduler: MainScheduler.instance)
-            .subscribe(onNext: { text in
-                Logger.shared.log(.debug, text)
-                //TODO: - se debe indexar la lista para los elementos buscados.
-            })
+            .subscribe(onNext: viewModel.filterSearch)
             .disposed(by: disposeBag)
-
+        
         searchBar
             .rx
             .searchButtonClicked
-            .subscribe(onNext: {
+            .subscribe(onNext: { [self] in
                 self.searchBar.resignFirstResponder()
                 if let searchText = self.searchBar.text {
-                    self.viewModel.search(text: searchText)
+                    if self.viewModel.search(text: searchText) {
+                        self.viewModel.saveOrUpdate(text: searchText)
+                        self.searchBar.text = ""
+                        self.viewModel.filterSearch("")
+                    }
+                    
                 }
-            })
-            .disposed(by: disposeBag)
+            }).disposed(by: disposeBag)
+        
+        tableView.register(
+            UINib(nibName: "MLSearchTableViewCell", bundle: nil),
+            forCellReuseIdentifier: String(describing: MLSearchTableViewCell.self)
+        )
+        
+        tableView.setShadow()
+        
+        clearHistoryButton.setTitle("clear_history".localized, for: .normal)
+    }
+    func clearHistory() {
+        let alertController = UIAlertController(
+            title: "clear_history_answer".localized,
+            message: nil,
+            preferredStyle: .alert
+        )
+        alertController.addAction(
+            UIAlertAction(
+                title: "clear".localized,
+                style: .destructive,
+                handler: { _ in
+                    self.viewModel.clearHistory()
+                    alertController.dismiss(animated: true, completion: nil)
+                }
+            ))
+        alertController.addAction(
+            UIAlertAction(
+                title: "cancel".localized,
+                style: .cancel,
+                handler: { _ in
+                    alertController.dismiss(animated: true, completion: nil)
+                }
+            ))
+        present(alertController, animated: true, completion: nil)
     }
 }

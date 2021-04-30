@@ -54,5 +54,21 @@ class ExtensionsTests: XCTestCase {
         XCTAssertEqual(item.formattedAvailableQuantity,"Stock: 1 disponible")
         
     }
-    
+    func testNSObject() {
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        let managedObjectContext = delegate.persistentContainer.viewContext
+        
+        let filledVar = MLSearchObject(context: managedObjectContext)
+
+        let dict: [String : Any] = [
+            "text": "Hola",
+            "mode": "search",
+            "lastUpdate": Date(),
+        ]
+        filledVar.loadWith(dictionary: dict)
+
+        XCTAssertEqual(filledVar.text, dict["text"] as? String)
+        XCTAssertEqual(filledVar.mode, dict["mode"] as? String)
+        XCTAssertEqual(filledVar.lastUpdate, dict["lastUpdate"] as? Date)
+    }
 }

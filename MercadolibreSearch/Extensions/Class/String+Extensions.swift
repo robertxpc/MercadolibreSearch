@@ -5,7 +5,7 @@
 //  Created by Roberto Parra Castillo on 17-04-21.
 //
 
-import UIKit
+import Foundation
 
 extension String {
     var localized: String {

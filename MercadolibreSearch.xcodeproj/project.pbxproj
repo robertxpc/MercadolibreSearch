@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		022613DB2637F81400043268 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022613DA2637F81400043268 /* AppDelegate.swift */; };
 		022613DD2637F81400043268 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022613DC2637F81400043268 /* SceneDelegate.swift */; };
-		022613DF2637F81400043268 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022613DE2637F81400043268 /* ViewController.swift */; };
 		022613E22637F81400043268 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 022613E02637F81400043268 /* Main.storyboard */; };
 		022613E52637F81400043268 /* MercadolibreSearch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 022613E32637F81400043268 /* MercadolibreSearch.xcdatamodeld */; };
 		022613E72637F81400043268 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 022613E62637F81400043268 /* Assets.xcassets */; };
@@ -39,7 +38,6 @@
 		022614BD2637F81400043268 /* MLSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022614BA2637F81400043268 /* MLSearchRouter.swift */; };
 		022614BE2637F81400043268 /* MLSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022614BB2637F81400043268 /* MLSearchViewController.swift */; };
 		022614BF2637F81400043268 /* MLSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022614BC2637F81400043268 /* MLSearchViewModel.swift */; };
-		022614D62637F81400043268 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 022614D52637F81400043268 /* swiftgen.yml */; };
 		0226150F2637F81400043268 /* StoryboardScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0226150E2637F81400043268 /* StoryboardScenes.swift */; };
 		022615172637F81400043268 /* MLSearchResultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022615142637F81400043268 /* MLSearchResultRouter.swift */; };
 		022615182637F81400043268 /* MLSearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022615152637F81400043268 /* MLSearchResultViewController.swift */; };
@@ -75,6 +73,14 @@
 		02278A5C26364FAA00346078 /* done-item-description.json in Resources */ = {isa = PBXBuildFile; fileRef = 02278A5B26364FAA00346078 /* done-item-description.json */; };
 		02278A622636554200346078 /* UtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02278A612636554200346078 /* UtilitiesTests.swift */; };
 		02278A6B2636557D00346078 /* ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02278A6A2636557D00346078 /* ExtensionsTests.swift */; };
+		02DE5F52263C53510044A861 /* DataAccessProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE5F51263C53510044A861 /* DataAccessProvider.swift */; };
+		02DE5F87263C8BC10044A861 /* MLSearchObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE5F85263C8BC10044A861 /* MLSearchObject+CoreDataClass.swift */; };
+		02DE5F88263C8BC10044A861 /* MLSearchObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE5F86263C8BC10044A861 /* MLSearchObject+CoreDataProperties.swift */; };
+		02DE5F94263C92AF0044A861 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE5F93263C92AE0044A861 /* NSObject+Extensions.swift */; };
+		02DE5F9B263CF9D50044A861 /* MLSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE5F99263CF9D50044A861 /* MLSearchTableViewCell.swift */; };
+		02DE5F9C263CF9D50044A861 /* MLSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02DE5F9A263CF9D50044A861 /* MLSearchTableViewCell.xib */; };
+		02DE5FB6263D08A50044A861 /* HistoryDataAccessProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE5FB5263D08A50044A861 /* HistoryDataAccessProvider.swift */; };
+		02DE5FBF263D0B610044A861 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE5FBE263D0B610044A861 /* Date+Extensions.swift */; };
 		A80B61A0195C390D9A373E20 /* Pods_MercadolibreSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 445734031404E0FE223F229D /* Pods_MercadolibreSearch.framework */; };
 		C06E3E0687987123CF2D3919 /* Pods_MercadolibreSearch_MercadolibreSearchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAD200124A418CD7AC4C19F /* Pods_MercadolibreSearch_MercadolibreSearchUITests.framework */; };
 		CEB053A25333F40BAFD83708 /* Pods_MercadolibreSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCA1198D6B8AB676CAAA213 /* Pods_MercadolibreSearchTests.framework */; };
@@ -101,7 +107,6 @@
 		022613D72637F81400043268 /* MercadolibreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MercadolibreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		022613DA2637F81400043268 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		022613DC2637F81400043268 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		022613DE2637F81400043268 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		022613E12637F81400043268 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		022613E42637F81400043268 /* MercadolibreSearch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MercadolibreSearch.xcdatamodel; sourceTree = "<group>"; };
 		022613E62637F81400043268 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -172,6 +177,14 @@
 		02278A5B26364FAA00346078 /* done-item-description.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "done-item-description.json"; sourceTree = "<group>"; };
 		02278A612636554200346078 /* UtilitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilitiesTests.swift; sourceTree = "<group>"; };
 		02278A6A2636557D00346078 /* ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsTests.swift; sourceTree = "<group>"; };
+		02DE5F51263C53510044A861 /* DataAccessProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAccessProvider.swift; sourceTree = "<group>"; };
+		02DE5F85263C8BC10044A861 /* MLSearchObject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "MLSearchObject+CoreDataClass.swift"; path = "/Users/robertoparracastillo/Desktop/PruebaTecnicaML/MercadolibreSearch/MercadolibreSearch/coredata/MLSearchObject+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		02DE5F86263C8BC10044A861 /* MLSearchObject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "MLSearchObject+CoreDataProperties.swift"; path = "/Users/robertoparracastillo/Desktop/PruebaTecnicaML/MercadolibreSearch/MercadolibreSearch/coredata/MLSearchObject+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		02DE5F93263C92AE0044A861 /* NSObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
+		02DE5F99263CF9D50044A861 /* MLSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLSearchTableViewCell.swift; sourceTree = "<group>"; };
+		02DE5F9A263CF9D50044A861 /* MLSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MLSearchTableViewCell.xib; sourceTree = "<group>"; };
+		02DE5FB5263D08A50044A861 /* HistoryDataAccessProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDataAccessProvider.swift; sourceTree = "<group>"; };
+		02DE5FBE263D0B610044A861 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		193D502F5EED16C63D92BE0E /* Pods-MercadolibreSearch-MercadolibreSearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadolibreSearch-MercadolibreSearchUITests.release.xcconfig"; path = "Target Support Files/Pods-MercadolibreSearch-MercadolibreSearchUITests/Pods-MercadolibreSearch-MercadolibreSearchUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2FCA1198D6B8AB676CAAA213 /* Pods_MercadolibreSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadolibreSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		445734031404E0FE223F229D /* Pods_MercadolibreSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadolibreSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -236,6 +249,8 @@
 		022613D92637F81400043268 /* MercadolibreSearch */ = {
 			isa = PBXGroup;
 			children = (
+				02DE5F62263C762A0044A861 /* App */,
+				02DE5F50263C532A0044A861 /* CoreData */,
 				022614102637F81400043268 /* Utilities */,
 				022614112637F81400043268 /* Model */,
 				022614122637F81400043268 /* Extensions */,
@@ -244,14 +259,7 @@
 				022614132637F81400043268 /* Views */,
 				022614B82637F81400043268 /* Scenes */,
 				022614D42637F81400043268 /* SwiftGen */,
-				022613DA2637F81400043268 /* AppDelegate.swift */,
-				022613DC2637F81400043268 /* SceneDelegate.swift */,
-				022613DE2637F81400043268 /* ViewController.swift */,
-				022613E62637F81400043268 /* Assets.xcassets */,
-				022613E82637F81400043268 /* LaunchScreen.storyboard */,
-				022613EB2637F81400043268 /* Info.plist */,
-				022613E32637F81400043268 /* MercadolibreSearch.xcdatamodeld */,
-				022614722637F81400043268 /* Localizable.strings */,
+				02DE5FC3263D0D6B0044A861 /* Resources */,
 			);
 			path = MercadolibreSearch;
 			sourceTree = "<group>";
@@ -316,9 +324,9 @@
 		022614132637F81400043268 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				022614B02637F81400043268 /* MLBaseXibView.swift */,
 				02278A442635FDAB00346078 /* ExpandibleView */,
 				02278A3B2635FD5300346078 /* CarouselView */,
-				022614B02637F81400043268 /* MLBaseXibView.swift */,
 				0226143F2637F81400043268 /* LoadingView */,
 				0226143E2637F81400043268 /* ErrorView */,
 			);
@@ -398,6 +406,7 @@
 		022614B92637F81400043268 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				02DE5F98263CF97F0044A861 /* cell */,
 				022614BA2637F81400043268 /* MLSearchRouter.swift */,
 				022614BB2637F81400043268 /* MLSearchViewController.swift */,
 				022614BC2637F81400043268 /* MLSearchViewModel.swift */,
@@ -408,8 +417,8 @@
 		022614D42637F81400043268 /* SwiftGen */ = {
 			isa = PBXGroup;
 			children = (
-				0226150E2637F81400043268 /* StoryboardScenes.swift */,
 				022614D52637F81400043268 /* swiftgen.yml */,
+				0226150E2637F81400043268 /* StoryboardScenes.swift */,
 			);
 			path = SwiftGen;
 			sourceTree = "<group>";
@@ -468,6 +477,8 @@
 			children = (
 				0226146C2637F81400043268 /* String+Extensions.swift */,
 				022615522637F81400043268 /* NumberFormatter+Extensions.swift */,
+				02DE5F93263C92AE0044A861 /* NSObject+Extensions.swift */,
+				02DE5FBE263D0B610044A861 /* Date+Extensions.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -555,6 +566,79 @@
 				02278A6A2636557D00346078 /* ExtensionsTests.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		02DE5F50263C532A0044A861 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				022613E32637F81400043268 /* MercadolibreSearch.xcdatamodeld */,
+				02DE5FB4263D08940044A861 /* Providers */,
+				02DE5FA6263D07EB0044A861 /* Base */,
+				02DE5F8C263C8BE60044A861 /* Model */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		02DE5F62263C762A0044A861 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				022613EB2637F81400043268 /* Info.plist */,
+				022613E82637F81400043268 /* LaunchScreen.storyboard */,
+				022613DC2637F81400043268 /* SceneDelegate.swift */,
+				022613DA2637F81400043268 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		02DE5F8C263C8BE60044A861 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				02DE5FBA263D0A370044A861 /* MLSearchObject */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		02DE5F98263CF97F0044A861 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				02DE5F99263CF9D50044A861 /* MLSearchTableViewCell.swift */,
+				02DE5F9A263CF9D50044A861 /* MLSearchTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		02DE5FA6263D07EB0044A861 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				02DE5F51263C53510044A861 /* DataAccessProvider.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		02DE5FB4263D08940044A861 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				02DE5FB5263D08A50044A861 /* HistoryDataAccessProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		02DE5FBA263D0A370044A861 /* MLSearchObject */ = {
+			isa = PBXGroup;
+			children = (
+				02DE5F85263C8BC10044A861 /* MLSearchObject+CoreDataClass.swift */,
+				02DE5F86263C8BC10044A861 /* MLSearchObject+CoreDataProperties.swift */,
+			);
+			path = MLSearchObject;
+			sourceTree = "<group>";
+		};
+		02DE5FC3263D0D6B0044A861 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				022613E62637F81400043268 /* Assets.xcassets */,
+				022614722637F81400043268 /* Localizable.strings */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		9AAB6624069DD68DFA989E2F /* Pods */ = {
@@ -691,7 +775,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				022613EA2637F81400043268 /* LaunchScreen.storyboard in Resources */,
-				022614D62637F81400043268 /* swiftgen.yml in Resources */,
+				02DE5F9C263CF9D50044A861 /* MLSearchTableViewCell.xib in Resources */,
 				022614732637F81400043268 /* Localizable.strings in Resources */,
 				022615262637F81400043268 /* MLSearchItemCell.xib in Resources */,
 				022613E72637F81400043268 /* Assets.xcassets in Resources */,
@@ -867,6 +951,7 @@
 			files = (
 				022615182637F81400043268 /* MLSearchResultViewController.swift in Sources */,
 				022614972637F81400043268 /* Logger.swift in Sources */,
+				02DE5FB6263D08A50044A861 /* HistoryDataAccessProvider.swift in Sources */,
 				022614172637F81400043268 /* BaseViewController.swift in Sources */,
 				0226146D2637F81400043268 /* String+Extensions.swift in Sources */,
 				022614BF2637F81400043268 /* MLSearchViewModel.swift in Sources */,
@@ -875,7 +960,7 @@
 				022614BE2637F81400043268 /* MLSearchViewController.swift in Sources */,
 				022615252637F81400043268 /* MLSearchItemCell.swift in Sources */,
 				0226152F2637F81400043268 /* MLSeachResultCollectionViewLayout.swift in Sources */,
-				022613DF2637F81400043268 /* ViewController.swift in Sources */,
+				02DE5FBF263D0B610044A861 /* Date+Extensions.swift in Sources */,
 				022614BD2637F81400043268 /* MLSearchRouter.swift in Sources */,
 				022614412637F81400043268 /* MLErrorView.swift in Sources */,
 				0226151E2637F81400043268 /* MLResponseListPaging.swift in Sources */,
@@ -885,7 +970,9 @@
 				022615432637F81400043268 /* MLInstallments.swift in Sources */,
 				022615602637F81400043268 /* MLItem+Extensions.swift in Sources */,
 				022615942637F81400043268 /* MLItemDetailViewController.swift in Sources */,
+				02DE5F88263C8BC10044A861 /* MLSearchObject+CoreDataProperties.swift in Sources */,
 				0226150F2637F81400043268 /* StoryboardScenes.swift in Sources */,
+				02DE5F52263C53510044A861 /* DataAccessProvider.swift in Sources */,
 				022615172637F81400043268 /* MLSearchResultRouter.swift in Sources */,
 				022615952637F81400043268 /* MLItemDetailViewModel.swift in Sources */,
 				022614B12637F81400043268 /* MLBaseXibView.swift in Sources */,
@@ -896,14 +983,17 @@
 				022613E52637F81400043268 /* MercadolibreSearch.xcdatamodeld in Sources */,
 				022613DD2637F81400043268 /* SceneDelegate.swift in Sources */,
 				022615482637F81400043268 /* MLShippingInfo.swift in Sources */,
+				02DE5F87263C8BC10044A861 /* MLSearchObject+CoreDataClass.swift in Sources */,
 				022615A22637F81400043268 /* MLItemPicture.swift in Sources */,
 				022614922637F81400043268 /* MLItem.swift in Sources */,
 				022615532637F81400043268 /* NumberFormatter+Extensions.swift in Sources */,
 				0226148A2637F81400043268 /* MLResponseList.swift in Sources */,
+				02DE5F94263C92AF0044A861 /* NSObject+Extensions.swift in Sources */,
 				022615372637F81400043268 /* UIScrollView+Reactive.swift in Sources */,
 				022615652637F81400043268 /* Utilities.swift in Sources */,
 				022614852637F81400043268 /* APIRestClient+Protocol.swift in Sources */,
 				0226141F2637F81400043268 /* BaseViewModel.swift in Sources */,
+				02DE5F9B263CF9D50044A861 /* MLSearchTableViewCell.swift in Sources */,
 				0226154D2637F81400043268 /* MLItemCoditionStatus.swift in Sources */,
 				0226147B2637F81400043268 /* MLServiceProtocol.swift in Sources */,
 				02278A372635FD4E00346078 /* MLCarouselView.swift in Sources */,
@@ -1095,7 +1185,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MercadolibreSearch/Info.plist;
+				INFOPLIST_FILE = MercadolibreSearch/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1114,7 +1204,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MercadolibreSearch/Info.plist;
+				INFOPLIST_FILE = MercadolibreSearch/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
