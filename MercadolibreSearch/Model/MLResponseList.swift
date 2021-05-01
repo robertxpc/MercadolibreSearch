@@ -11,8 +11,11 @@ struct MLResponseList<Type: Decodable>: Decodable {
 
     var results: [Type]?
     var paging: MLResponseListPaging?
+    var sort: MLSortItem
+    var availableSorts: [MLSortItem]
 
     private enum CodingKeys: String, CodingKey {
-        case results, paging
+        case results, paging, sort
+        case availableSorts = "available_sorts"
     }
 }

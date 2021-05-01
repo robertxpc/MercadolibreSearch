@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 
 protocol MLServiceProtocol {
-    func search(by text: String, offset: Int) -> Observable<MLResponseList<MLItem>>
+    func search(by text: String, offset: Int, sort: MLSortItem?) -> Observable<MLResponseList<MLItem>>
     func itemDetail(_ itemId: String) -> Observable<MLItem>
     func itemDescription(_ itemId: String) -> Observable<[MLItemDescription]>
 }

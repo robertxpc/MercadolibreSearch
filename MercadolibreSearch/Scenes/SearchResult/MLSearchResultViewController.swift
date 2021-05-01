@@ -59,6 +59,17 @@ class MLSearchResultViewController: UIViewController, BaseViewController {
             .disposed(by: disposeBag)
         
     }
+    @IBAction func sortPressed(_ sender: Any) {
+        let sortView = MLSortView.instantiate()
+        viewModel.sorts.bind(
+            to: sortView.sortItems
+        ).disposed(by: disposeBag)
+        
+        sortView.onItemSelected.subscribe(
+            onNext: viewModel.sortBy
+            ).disposed(by: disposeBag)
+        view.fill(with: sortView)
+    }
     func setupUI() {
         collectionView.register(UINib(nibName: "MLSearchItemCell", bundle: nil), forCellWithReuseIdentifier: String(describing: MLSearchItemCell.self))
         collectionView.setShadow()

@@ -14,7 +14,7 @@ import RxSwift
 
 extension MockMLServices: MLServiceProtocol {
     
-    func search(by text: String, offset: Int) -> Observable<MLResponseList<MLItem>> {
+    func search(by text: String, offset: Int, sort: MLSortItem?) -> Observable<MLResponseList<MLItem>> {
         switch mode {
         case .done:
             return getData(for: "done-search-list")

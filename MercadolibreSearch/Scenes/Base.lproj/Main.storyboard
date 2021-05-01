@@ -105,7 +105,14 @@
                             <constraint firstItem="zAH-p9-3WJ" firstAttribute="trailing" secondItem="26A-9z-rSn" secondAttribute="trailing" id="z4F-29-cKh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ouX-2b-5Tb"/>
+                    <navigationItem key="navigationItem" id="ouX-2b-5Tb">
+                        <barButtonItem key="rightBarButtonItem" title="Sort" image="arrow.up.arrow.down" catalog="system" style="plain" id="SLA-Jk-9xc">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="sortPressed:" destination="J5N-PE-fSk" id="HaO-Ey-RYg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="26A-9z-rSn" id="0B4-wV-pYs"/>
                         <segue destination="SBM-PN-AYs" kind="show" id="9cq-aP-hNm"/>
@@ -221,6 +228,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.up.arrow.down" catalog="system" width="128" height="98"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

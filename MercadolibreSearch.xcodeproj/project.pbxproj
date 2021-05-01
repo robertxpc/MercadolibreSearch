@@ -74,6 +74,11 @@
 		02278A622636554200346078 /* UtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02278A612636554200346078 /* UtilitiesTests.swift */; };
 		02278A6B2636557D00346078 /* ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02278A6A2636557D00346078 /* ExtensionsTests.swift */; };
 		0242F871263D2FC5004244A3 /* SearchViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0242F870263D2FC5004244A3 /* SearchViewTests.swift */; };
+		0242F87A263D2FC5004244A3 /* MLSortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0242F879263D2FC5004244A3 /* MLSortView.swift */; };
+		0242F87F263D2FC5004244A3 /* MLSortView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0242F87E263D2FC5004244A3 /* MLSortView.xib */; };
+		0242F884263D2FC5004244A3 /* MLSortItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0242F883263D2FC5004244A3 /* MLSortItem.swift */; };
+		0242F88B263D2FC5004244A3 /* MLSortViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0242F889263D2FC5004244A3 /* MLSortViewTableViewCell.swift */; };
+		0242F88C263D2FC5004244A3 /* MLSortViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0242F88A263D2FC5004244A3 /* MLSortViewTableViewCell.xib */; };
 		02DE5F52263C53510044A861 /* DataAccessProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE5F51263C53510044A861 /* DataAccessProvider.swift */; };
 		02DE5F87263C8BC10044A861 /* MLSearchObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE5F85263C8BC10044A861 /* MLSearchObject+CoreDataClass.swift */; };
 		02DE5F88263C8BC10044A861 /* MLSearchObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE5F86263C8BC10044A861 /* MLSearchObject+CoreDataProperties.swift */; };
@@ -179,6 +184,11 @@
 		02278A612636554200346078 /* UtilitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilitiesTests.swift; sourceTree = "<group>"; };
 		02278A6A2636557D00346078 /* ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsTests.swift; sourceTree = "<group>"; };
 		0242F870263D2FC5004244A3 /* SearchViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewTests.swift; sourceTree = "<group>"; };
+		0242F879263D2FC5004244A3 /* MLSortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLSortView.swift; sourceTree = "<group>"; };
+		0242F87E263D2FC5004244A3 /* MLSortView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MLSortView.xib; sourceTree = "<group>"; };
+		0242F883263D2FC5004244A3 /* MLSortItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLSortItem.swift; sourceTree = "<group>"; };
+		0242F889263D2FC5004244A3 /* MLSortViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLSortViewTableViewCell.swift; sourceTree = "<group>"; };
+		0242F88A263D2FC5004244A3 /* MLSortViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MLSortViewTableViewCell.xib; sourceTree = "<group>"; };
 		02DE5F51263C53510044A861 /* DataAccessProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAccessProvider.swift; sourceTree = "<group>"; };
 		02DE5F85263C8BC10044A861 /* MLSearchObject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "MLSearchObject+CoreDataClass.swift"; path = "/Users/robertoparracastillo/Desktop/PruebaTecnicaML/MercadolibreSearch/MercadolibreSearch/coredata/MLSearchObject+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		02DE5F86263C8BC10044A861 /* MLSearchObject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "MLSearchObject+CoreDataProperties.swift"; path = "/Users/robertoparracastillo/Desktop/PruebaTecnicaML/MercadolibreSearch/MercadolibreSearch/coredata/MLSearchObject+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
@@ -309,6 +319,7 @@
 				0226154C2637F81400043268 /* MLItemCoditionStatus.swift */,
 				0226159C2637F81400043268 /* MLItemDescription.swift */,
 				022615A12637F81400043268 /* MLItemPicture.swift */,
+				0242F883263D2FC5004244A3 /* MLSortItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -331,6 +342,7 @@
 				02278A3B2635FD5300346078 /* CarouselView */,
 				0226143F2637F81400043268 /* LoadingView */,
 				0226143E2637F81400043268 /* ErrorView */,
+				0242F878263D2FC5004244A3 /* SortView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -579,6 +591,25 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		0242F878263D2FC5004244A3 /* SortView */ = {
+			isa = PBXGroup;
+			children = (
+				0242F888263D2FC5004244A3 /* cell */,
+				0242F879263D2FC5004244A3 /* MLSortView.swift */,
+				0242F87E263D2FC5004244A3 /* MLSortView.xib */,
+			);
+			path = SortView;
+			sourceTree = "<group>";
+		};
+		0242F888263D2FC5004244A3 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				0242F889263D2FC5004244A3 /* MLSortViewTableViewCell.swift */,
+				0242F88A263D2FC5004244A3 /* MLSortViewTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		02DE5F50263C532A0044A861 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -786,6 +817,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				022613EA2637F81400043268 /* LaunchScreen.storyboard in Resources */,
+				0242F87F263D2FC5004244A3 /* MLSortView.xib in Resources */,
+				0242F88C263D2FC5004244A3 /* MLSortViewTableViewCell.xib in Resources */,
 				02DE5F9C263CF9D50044A861 /* MLSearchTableViewCell.xib in Resources */,
 				022614732637F81400043268 /* Localizable.strings in Resources */,
 				022615262637F81400043268 /* MLSearchItemCell.xib in Resources */,
@@ -978,6 +1011,7 @@
 				0226159D2637F81400043268 /* MLItemDescription.swift in Sources */,
 				0226153E2637F81400043268 /* UIImageView+Extensions.swift in Sources */,
 				022614242637F81400043268 /* BaseRouter.swift in Sources */,
+				0242F88B263D2FC5004244A3 /* MLSortViewTableViewCell.swift in Sources */,
 				022615432637F81400043268 /* MLInstallments.swift in Sources */,
 				022615602637F81400043268 /* MLItem+Extensions.swift in Sources */,
 				022615942637F81400043268 /* MLItemDetailViewController.swift in Sources */,
@@ -985,6 +1019,7 @@
 				0226150F2637F81400043268 /* StoryboardScenes.swift in Sources */,
 				02DE5F52263C53510044A861 /* DataAccessProvider.swift in Sources */,
 				022615172637F81400043268 /* MLSearchResultRouter.swift in Sources */,
+				0242F87A263D2FC5004244A3 /* MLSortView.swift in Sources */,
 				022615952637F81400043268 /* MLItemDetailViewModel.swift in Sources */,
 				022614B12637F81400043268 /* MLBaseXibView.swift in Sources */,
 				022613DB2637F81400043268 /* AppDelegate.swift in Sources */,
@@ -998,6 +1033,7 @@
 				022615A22637F81400043268 /* MLItemPicture.swift in Sources */,
 				022614922637F81400043268 /* MLItem.swift in Sources */,
 				022615532637F81400043268 /* NumberFormatter+Extensions.swift in Sources */,
+				0242F884263D2FC5004244A3 /* MLSortItem.swift in Sources */,
 				0226148A2637F81400043268 /* MLResponseList.swift in Sources */,
 				02DE5F94263C92AF0044A861 /* NSObject+Extensions.swift in Sources */,
 				022615372637F81400043268 /* UIScrollView+Reactive.swift in Sources */,
