@@ -15,18 +15,24 @@ class MLSortView: UIView, MLBaseXibView {
     @IBOutlet weak var tableView: UITableView!
     let sortItems = BehaviorRelay<[MLSortItem]>(value: [])
     let onItemSelected = PublishSubject<Int>()
-    
+
     override func awakeFromNib() {
-        
+
         tableView.register(
             UINib(nibName: "MLSortViewTableViewCell", bundle: nil),
             forCellReuseIdentifier: String(describing: MLSortViewTableViewCell.self)
         )
-        
-        sortItems.asObservable().bind(to: tableView.rx.items(cellIdentifier: "MLSortViewTableViewCell", cellType: MLSortViewTableViewCell.self), curriedArgument: {index, item, cell in
-            cell.bind(item, isSelected: index == 0)
-        }).disposed(by:disposeBag)
-        
+
+        sortItems
+            .asObservable()
+            .bind(to: tableView.rx.items(
+                    cellIdentifier: "MLSortViewTableViewCell",
+                    cellType: MLSortViewTableViewCell.self),
+                  curriedArgument: { index, item, cell in
+                    cell.bind(item, isSelected: index == 0)
+                  }
+            ).disposed(by: disposeBag)
+
         tableView
             .rx
             .itemSelected
@@ -35,10 +41,10 @@ class MLSortView: UIView, MLBaseXibView {
                 self.closeView()
             })
             .disposed(by: disposeBag)
-        
+
     }
-    
-    @IBAction func closeView(){
+
+    @IBAction func closeView() {
         removeFromSuperview()
     }
 }

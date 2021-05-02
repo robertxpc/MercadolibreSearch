@@ -12,7 +12,7 @@ extension MLItem {
         NumberFormatter.numberFormater(from: currencyId)
             .string(from: NSNumber(value: price))
     }
-    
+
     var formattedDiscount: String? {
         guard let originalPrice = originalPrice else {
             return nil
@@ -26,13 +26,13 @@ extension MLItem {
         }
         return nil
     }
-    
+
     var formattedAvailableQuantity: String {
         String(format: "stock_format_\(availableQuantity == 1 ? "s" : "p")".localized,
             availableQuantity
         )
     }
-    
+
     func soldQuantityAndConditionString(separator: String = " | ") -> String {
         var conditionText = [String]()
         switch condition {
@@ -48,5 +48,5 @@ extension MLItem {
         }
         return conditionText.joined(separator: separator)
     }
-    
+
 }

@@ -11,38 +11,38 @@ import RxSwift
 import RxCocoa
 
 class MLSearchViewModel: BaseViewModel {
-    
+
     public struct Inputs {
         let repository: MLServiceProtocol
     }
     var loading = BehaviorRelay<Bool>(value: false)
     var error = PublishSubject<Error>()
-    
+
     private(set) var inputs: Inputs
     internal var router: BaseRouter
-    
+
     private let disposeBag = DisposeBag()
-    
+
     private(set) var history = BehaviorRelay<[MLSearchObject]>(value: [])
     private var historyDataAccessProvider = HistoryDataAccessProvider()
-    
+
     init(router: BaseRouter, inputs: Inputs) {
         self.router = router
         self.inputs = inputs
         self.fetchAndUpdateObservableHistory()
     }
-    
+
     private func fetchAndUpdateObservableHistory() {
         historyDataAccessProvider.fetchObservableData()
-            
+
             .map({ $0 })
-            
-            .subscribe(onNext : {
+
+            .subscribe(onNext: {
                 self.history.accept($0)
             }).disposed(by: disposeBag)
     }
     public func addToHistory(text: String, date: Date = Date()) {
-        
+
         historyDataAccessProvider.addSearchObject(
             text: text,
             mode: "search",
@@ -57,7 +57,7 @@ class MLSearchViewModel: BaseViewModel {
     func search(text: String) -> Bool {
 
         guard text.count > 2 else { return false }
-        
+
         router.present(
             with: MLSearchRouter.PresentationContext.search(text),
             animated: true
@@ -65,7 +65,7 @@ class MLSearchViewModel: BaseViewModel {
         return true
     }
     func saveOrUpdate(text: String) {
-        if let index = history.value.lastIndex(where: {$0.text == text})  {
+        if let index = history.value.lastIndex(where: {$0.text == text}) {
             historyDataAccessProvider.updateDate(with: Date(), in: index)
         } else {
             historyDataAccessProvider.addSearchObject(

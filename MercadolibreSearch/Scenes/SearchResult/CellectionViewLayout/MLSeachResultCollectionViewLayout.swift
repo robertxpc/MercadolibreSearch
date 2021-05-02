@@ -8,7 +8,7 @@
 import UIKit
 
 class MLSeachResultCollectionViewLayout: UICollectionViewFlowLayout {
-    
+
     let defaultHeight: CGFloat = 140
     let minWidth: CGFloat = 320
 

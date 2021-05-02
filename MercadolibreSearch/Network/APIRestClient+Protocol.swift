@@ -10,7 +10,7 @@ import Alamofire
 import RxSwift
 
 extension APIRestClient: MLServiceProtocol {
-    func search(by text: String, offset: Int, sort: MLSortItem?) -> Observable<MLResponseList<MLItem>>{
+    func search(by text: String, offset: Int, sort: MLSortItem?) -> Observable<MLResponseList<MLItem>> {
         var parameters: [String: Any] = [
             "q": text,
             "offset": offset

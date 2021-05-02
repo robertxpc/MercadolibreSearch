@@ -22,7 +22,7 @@ struct MLItem: Decodable {
     var acceptsMercadopago: Bool
     var availableQuantity: Int
     var pictures: [MLItemPicture]?
-    
+
     private enum CodingKeys: String, CodingKey {
         case id, title, price, thumbnail, installments, shipping, condition, pictures
         case currencyId = "currency_id"

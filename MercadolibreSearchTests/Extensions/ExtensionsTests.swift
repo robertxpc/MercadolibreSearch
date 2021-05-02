@@ -16,20 +16,20 @@ class ExtensionsTests: XCTestCase {
         installments.amount = 100000
         installments.rate = 0
         installments.currencyId = "CLP"
-        
+
         XCTAssertEqual(installments.installmentsStringFormated, "6x CLP 100.000")
         XCTAssertEqual(installments.rateStringFormated, "not_rate_installment".localized)
-        
+
         installments.rate = 0.2
         XCTAssertEqual(installments.rateStringFormated, "")
-        
+
         installments.rate = 0
         installments.quantity = 12
         installments.currencyId = "USD"
         installments.amount = 55.95
         XCTAssertEqual(installments.installmentsStringFormated, "12x US$ 55,95")
     }
-    
+
     func testMLItemExtensions() {
         let item = MLItem(
             id: "MLC-TEST",
@@ -46,24 +46,24 @@ class ExtensionsTests: XCTestCase {
             availableQuantity: 1,
             pictures: nil
             )
-        
-        XCTAssertEqual(item.soldQuantityAndConditionString(separator: "."),"Nuevo.1 vendido")
-        XCTAssertEqual(item.soldQuantityAndConditionString(),"Nuevo | 1 vendido")
-        XCTAssertEqual(item.formattedPrice,"CLP 1.000")
-        XCTAssertEqual(item.formattedDiscount,"99% OFF")
-        XCTAssertEqual(item.formattedAvailableQuantity,"Stock: 1 disponible")
-        
+
+        XCTAssertEqual(item.soldQuantityAndConditionString(separator: "."), "Nuevo.1 vendido")
+        XCTAssertEqual(item.soldQuantityAndConditionString(), "Nuevo | 1 vendido")
+        XCTAssertEqual(item.formattedPrice, "CLP 1.000")
+        XCTAssertEqual(item.formattedDiscount, "99% OFF")
+        XCTAssertEqual(item.formattedAvailableQuantity, "Stock: 1 disponible")
+
     }
     func testNSObject() {
+        // swiftlint:disable:next force_cast
         let delegate = UIApplication.shared.delegate as! AppDelegate
         let managedObjectContext = delegate.persistentContainer.viewContext
-        
         let filledVar = MLSearchObject(context: managedObjectContext)
 
-        let dict: [String : Any] = [
+        let dict: [String: Any] = [
             "text": "Hola",
             "mode": "search",
-            "lastUpdate": Date(),
+            "lastUpdate": Date()
         ]
         filledVar.loadWith(dictionary: dict)
 

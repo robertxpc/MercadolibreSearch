@@ -8,17 +8,17 @@
 import UIKit
 
 class MLSearchRouter: BaseRouter {
-    
+
     enum PresentationContext {
         case search(String)
     }
 
     weak var baseViewController: UIViewController?
-    
+
     init(baseViewController: UIViewController) {
         self.baseViewController = baseViewController
     }
-    
+
     func present(with context: Any?, on viewController: UIViewController?, animated: Bool, completion: (() -> Void)?) {
         guard let presentationContext = context as? PresentationContext else {
             assertionFailure("The context type missmatch")
@@ -40,9 +40,9 @@ class MLSearchRouter: BaseRouter {
             (viewController ?? baseViewController)?.navigationController?
                 .pushViewController(searchResult, animated: animated)
         }
-        
+
     }
-    
+
     func dismiss(animated: Bool, context: Any?, completion: (() -> Void)?) {
         baseViewController?.dismiss(animated: animated, completion: completion)
     }

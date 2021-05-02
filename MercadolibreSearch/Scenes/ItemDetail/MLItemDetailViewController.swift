@@ -24,7 +24,7 @@ class MLItemDetailViewController: UIViewController, BaseViewController {
     @IBOutlet weak var stockLabel: UILabel!
     @IBOutlet weak var descriptionTitleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,7 +35,7 @@ class MLItemDetailViewController: UIViewController, BaseViewController {
     }
 
     func bindViewModel() {
-        
+
         viewModel
             .loading
             .subscribe(onNext: showLoading)
@@ -93,7 +93,7 @@ class MLItemDetailViewController: UIViewController, BaseViewController {
                 format: "installments_format".localized,
                 installment,
                 installmentRate)
-            
+
             let attrSubString: [String: [NSAttributedString.Key: Any]] = [
                 installment: [.foregroundColor: UIColor.systemGreen],
                 installmentRate: [.foregroundColor: UIColor.systemGreen]
@@ -102,7 +102,7 @@ class MLItemDetailViewController: UIViewController, BaseViewController {
                 .attributedString(
                     baseAttributes: [.font: UIFont.systemFont(ofSize: 16)],
                     attributedSubStrings: attrSubString)
-            
+
             stackView.insertArrangedSubview(
                 installmentsLabel,
                 at: stackView.arrangedSubviews.index(after: stackView.arrangedSubviews.lastIndex(of: price.superview ?? UIView()) ?? 3))

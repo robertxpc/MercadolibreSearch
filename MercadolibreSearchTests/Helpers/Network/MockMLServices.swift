@@ -17,10 +17,10 @@ class MockMLServices {
         case done, empty, error(Error)
     }
     var mode: Modes = .done
-    
+
     func getData<T: Decodable>(for fileName: String) -> Observable<T> {
         return Observable.create { observer -> Disposable in
-            
+
         guard let url = Bundle(for: MockMLServices.self).url(forResource: fileName, withExtension: "json"),
               let data = try? Data(contentsOf: url),
               let decodedData = try? JSONDecoder().decode(T.self, from: data) else {

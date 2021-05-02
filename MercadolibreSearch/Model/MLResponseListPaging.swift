@@ -7,8 +7,8 @@
 
 import UIKit
 
-struct MLResponseListPaging:  Decodable {
-    
+struct MLResponseListPaging: Decodable {
+
     var total: Int = 0
     var offset: Int = 0
     var limit: Int = 0

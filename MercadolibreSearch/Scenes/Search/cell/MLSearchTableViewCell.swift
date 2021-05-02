@@ -22,9 +22,9 @@ class MLSearchTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func bind(item:MLSearchObject) {
+    func bind(item: MLSearchObject) {
         searchTextLabel.text = item.text
         dateLabel.text = item.lastUpdate?.timeAgoDisplay()
     }
-    
+
 }

@@ -9,11 +9,11 @@ import UIKit
 
 protocol BaseRouter {
     var baseViewController: UIViewController? { get set }
-    
+
     func present(with context: Any?, on viewController: UIViewController?, animated: Bool, completion: (() -> Void)?)
-    
+
     func dismiss(animated: Bool, context: Any?, completion: (() -> Void)?)
-    
+
 }
 extension BaseRouter {
     func present(with context: Any?, animated: Bool, completion: (() -> Void)?) {

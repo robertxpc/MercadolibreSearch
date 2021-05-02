@@ -12,10 +12,10 @@ extension String {
         return NSLocalizedString(self, comment: "")
     }
     func attributedString(
-        baseAttributes:[NSAttributedString.Key: Any],
+        baseAttributes: [NSAttributedString.Key: Any],
         attributedSubStrings: [String: [NSAttributedString.Key: Any]]
     ) -> NSAttributedString {
-        
+
         let mutableString = NSMutableAttributedString(
             string: self,
             attributes: baseAttributes

@@ -13,5 +13,5 @@ protocol BaseViewModel {
     var router: BaseRouter { get }
     var error: PublishSubject<Error> { get }
     var loading: BehaviorRelay<Bool> { get }
-    
+
 }

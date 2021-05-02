@@ -8,7 +8,7 @@
 import Foundation
 
 extension NSObject {
-    
+
     func loadWith(dictionary: [String: Any]) {
         for attr in dictionary {
             self.setValue(attr.value, forKey: attr.key)

@@ -12,13 +12,15 @@ class HistoryDataAccessProvider: DataAccessProvider<MLSearchObject> {
     var filter = "" {
         didSet { updateData() }
     }
-    
+
     public func addSearchObject(text: String, mode: String, lastUpdate: Date) {
-        let newValue = NSEntityDescription.insertNewObject(forEntityName: "\(MLSearchObject.self)", into: managedObjectContext) as! MLSearchObject
-        newValue.text = text
-        newValue.mode = mode
-        newValue.lastUpdate = lastUpdate
-        
+        let newValue = NSEntityDescription.insertNewObject(
+            forEntityName: "\(MLSearchObject.self)",
+            into: managedObjectContext) as? MLSearchObject
+        newValue?.text = text
+        newValue?.mode = mode
+        newValue?.lastUpdate = lastUpdate
+
         do {
             try managedObjectContext.save()
             contentFromCoreData.accept(fetchData())
@@ -28,7 +30,7 @@ class HistoryDataAccessProvider: DataAccessProvider<MLSearchObject> {
     }
     public func updateDate(with date: Date, in index: Int) {
         contentFromCoreData.value[index].lastUpdate = date
-        
+
         do {
             try managedObjectContext.save()
             contentFromCoreData.accept(fetchData())
@@ -41,7 +43,7 @@ class HistoryDataAccessProvider: DataAccessProvider<MLSearchObject> {
         request.sortDescriptors = [NSSortDescriptor(key: "lastUpdate", ascending: false)]
         if filter.count > 1 {
             request.predicate = NSPredicate(format: "text CONTAINS[c] %@", argumentArray: [filter])
-            
+
         }
         return request
     }

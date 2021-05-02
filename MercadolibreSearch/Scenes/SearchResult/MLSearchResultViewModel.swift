@@ -10,24 +10,24 @@ import RxSwift
 import RxCocoa
 
 class MLSearchResultViewModel: BaseViewModel {
-    
+
     public struct Inputs {
         let repository: MLServiceProtocol
         let searchText: String
     }
-    
+
     var loading = BehaviorRelay<Bool>(value: false)
     var error = PublishSubject<Error>()
-    
+
     private(set) var inputs: Inputs
     internal var router: BaseRouter
     private let disposeBag = DisposeBag()
-    
+
     public internal(set) var data = BehaviorRelay<[MLItem]>(value: [])
     private var listPaging: MLResponseListPaging?
-    
+
     public internal(set) var sorts = BehaviorRelay<[MLSortItem]>(value: [])
-    
+
     init(router: BaseRouter, inputs: Inputs) {
         self.router = router
         self.inputs = inputs

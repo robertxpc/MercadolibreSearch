@@ -10,14 +10,13 @@ import RxSwift
 
 class MLSearchResultViewController: UIViewController, BaseViewController {
 
-    
     weak var loadingView: MLLoadingView?
     weak var errorView: MLErrorView?
     var viewModel: MLSearchResultViewModel!
     let disposeBag = DisposeBag()
 
     @IBOutlet weak var collectionView: UICollectionView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,7 +26,7 @@ class MLSearchResultViewController: UIViewController, BaseViewController {
     }
 
     func bindViewModel() {
-        
+
         viewModel
             .loading
             .subscribe(onNext: showLoading)
@@ -37,7 +36,7 @@ class MLSearchResultViewController: UIViewController, BaseViewController {
             .error
             .subscribe(onNext: show(error:))
             .disposed(by: disposeBag)
-        
+
         viewModel.data.bind(
             to: collectionView.rx.items(
                 cellIdentifier: "MLSearchItemCell",
@@ -45,7 +44,7 @@ class MLSearchResultViewController: UIViewController, BaseViewController {
         ) { _, item, cell in
             cell.bind(item: item)
         }.disposed(by: disposeBag)
-        
+
         collectionView
             .rx
             .reachedBottom
@@ -57,14 +56,14 @@ class MLSearchResultViewController: UIViewController, BaseViewController {
             .itemSelected
             .subscribe(onNext: viewModel.showItemDetail)
             .disposed(by: disposeBag)
-        
+
     }
     @IBAction func sortPressed(_ sender: Any) {
         let sortView = MLSortView.instantiate()
         viewModel.sorts.bind(
             to: sortView.sortItems
         ).disposed(by: disposeBag)
-        
+
         sortView.onItemSelected.subscribe(
             onNext: viewModel.sortBy
             ).disposed(by: disposeBag)

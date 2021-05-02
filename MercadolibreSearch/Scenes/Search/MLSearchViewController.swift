@@ -19,7 +19,7 @@ class MLSearchViewController: UIViewController, BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var clearHistoryButton: UIButton!
     @IBOutlet weak var clearHistoryButtonHeight: NSLayoutConstraint!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,15 +29,15 @@ class MLSearchViewController: UIViewController, BaseViewController {
                 repository: APIRestClient.shared
             )
         )
-        
+
         setupUI()
         bindViewModel()
-        
+
         // Do any additional setup after loading the view.
     }
 
     func bindViewModel() {
-        
+
         viewModel
             .loading
             .subscribe(onNext: showLoading)
@@ -47,7 +47,7 @@ class MLSearchViewController: UIViewController, BaseViewController {
             .error
             .subscribe(onNext: show(error:))
             .disposed(by: disposeBag)
-        
+
         viewModel.history.bind(
             to: tableView.rx.items(
                 cellIdentifier: "MLSearchTableViewCell",
@@ -55,27 +55,27 @@ class MLSearchViewController: UIViewController, BaseViewController {
         ) { _, item, cell in
             cell.bind(item: item)
         }.disposed(by: disposeBag)
-        
+
         viewModel
             .history
             .bind(onNext: {self.clearHistoryButtonHeight.constant = $0.count == 0 ? 0 : 35})
             .disposed(by: disposeBag)
-        
+
         tableView
             .rx
             .itemSelected
             .subscribe(onNext: {self.viewModel.historySelected(index: $0.row)})
             .disposed(by: disposeBag)
     }
-    
+
     func setupUI() {
-        
+
         clearHistoryButton
             .rx
             .tap
             .subscribe(onNext: clearHistory)
             .disposed(by: disposeBag)
-        
+
         searchBar
             .rx
             .text
@@ -83,7 +83,7 @@ class MLSearchViewController: UIViewController, BaseViewController {
             .throttle(DispatchTimeInterval.milliseconds(300), scheduler: MainScheduler.instance)
             .subscribe(onNext: viewModel.filterSearch)
             .disposed(by: disposeBag)
-        
+
         searchBar
             .rx
             .searchButtonClicked
@@ -95,17 +95,17 @@ class MLSearchViewController: UIViewController, BaseViewController {
                         self.searchBar.text = ""
                         self.viewModel.filterSearch("")
                     }
-                    
+
                 }
             }).disposed(by: disposeBag)
-        
+
         tableView.register(
             UINib(nibName: "MLSearchTableViewCell", bundle: nil),
             forCellReuseIdentifier: String(describing: MLSearchTableViewCell.self)
         )
-        
+
         tableView.setShadow()
-        
+
         clearHistoryButton.setTitle("clear_history".localized, for: .normal)
     }
     func clearHistory() {

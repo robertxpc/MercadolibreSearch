@@ -10,22 +10,22 @@ import RxSwift
 import RxCocoa
 
 class MLItemDetailViewModel: BaseViewModel {
-    
+
     public struct Inputs {
         let repository: MLServiceProtocol
         let item: MLItem
     }
-    
+
     var loading = BehaviorRelay<Bool>(value: false)
     var error = PublishSubject<Error>()
-    
+
     public internal(set) var item = BehaviorRelay<MLItem?>(value: nil)
     public internal(set) var itemDescription = BehaviorRelay<[MLItemDescription]>(value: [])
-    
+
     private(set) var inputs: Inputs
     internal var router: BaseRouter
     private let disposeBag = DisposeBag()
-    
+
     init(router: BaseRouter, inputs: Inputs) {
         self.router = router
         self.inputs = inputs
@@ -56,5 +56,5 @@ class MLItemDetailViewModel: BaseViewModel {
                        onError: error.onNext)
             .disposed(by: disposeBag)
     }
-    
+
 }

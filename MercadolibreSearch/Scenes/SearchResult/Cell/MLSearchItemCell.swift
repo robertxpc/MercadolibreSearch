@@ -8,7 +8,7 @@
 import UIKit
 
 class MLSearchItemCell: UICollectionViewCell {
-    
+
     @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var price: UILabel!
@@ -49,7 +49,6 @@ class MLSearchItemCell: UICollectionViewCell {
                 format: "installments_format".localized,
                 installment,
                 installmentRate)
-
 
             let attrSubString: [String: [NSAttributedString.Key: Any]] = [
                 installment: [.foregroundColor: UIColor.systemGreen],

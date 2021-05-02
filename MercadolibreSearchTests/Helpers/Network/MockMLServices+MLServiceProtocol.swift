@@ -13,7 +13,7 @@ import RxSwift
 @testable import MercadolibreSearch
 
 extension MockMLServices: MLServiceProtocol {
-    
+
     func search(by text: String, offset: Int, sort: MLSortItem?) -> Observable<MLResponseList<MLItem>> {
         switch mode {
         case .done:
@@ -43,6 +43,6 @@ extension MockMLServices: MLServiceProtocol {
         case .error(let error):
             return getError(with: error)
         }
-        
+
     }
 }

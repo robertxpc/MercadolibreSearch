@@ -21,14 +21,14 @@ class SearchViewTests: XCTestCase {
         router = RouterTest()
         services = MockMLServices()
         scheduler = TestScheduler(initialClock: 0)
-        
+
         viewModel = MLSearchViewModel(
             router: router,
             inputs: MLSearchViewModel.Inputs(
                 repository: services
             )
         )
-        
+
         scheduler.start()
     }
     override func tearDown() {
@@ -40,26 +40,26 @@ class SearchViewTests: XCTestCase {
     }
     func testSearchHistory() {
         let oldCount = viewModel.history.value.count
-        
+
         viewModel.addToHistory(text: "test1", date: Date())
         viewModel.addToHistory(text: "test2", date: Date())
         XCTAssertEqual(viewModel.history.value.count, oldCount + 2)
-        
+
         viewModel.clearHistory()
         XCTAssertEqual(viewModel.history.value.count, 0)
-        
+
         viewModel.saveOrUpdate(text: "test1")
         viewModel.saveOrUpdate(text: "test1")
         XCTAssertEqual(viewModel.history.value.count, 1)
         viewModel.clearHistory()
-        
+
         viewModel.saveOrUpdate(text: "test1")
         viewModel.saveOrUpdate(text: "MercadoLibre")
         viewModel.saveOrUpdate(text: "test2")
         viewModel.filterSearch("Libre")
         XCTAssertEqual(viewModel.history.value.count, 1)
         XCTAssertEqual(viewModel.history.value.first?.text, "MercadoLibre")
-        
+
     }
-    
+
 }
